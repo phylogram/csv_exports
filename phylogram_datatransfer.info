@@ -2,4 +2,6 @@ name = Phylogram Datatransfer
 description = Module gathers data from campaignion and exports it to csv
 core = 7.x
 
+files[] = phylogram_datatransfer.config
+
 files[] = src/export_model/PhyloDataStorageInterface.php
