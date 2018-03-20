@@ -1,3 +1,8 @@
+Alltogether:
+===========
+
+https://docs.google.com/document/d/1M0JrhPvrGoGCI8DPFujqHswcGIWNMIMPyX_O8Yh1UZ8/edit#
+
 Basic program flow of collecting and storing data:
 ==================================================
 
