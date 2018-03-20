@@ -11,5 +11,17 @@ namespace src\export_model;
 
 class FolderNaming
 {
+    static public function translateTime(array $levels): array
+    {
+        $translated_levels = array();
 
+        foreach ($levels as $level => $name) {
+            if (is_numeric($level)) {
+                $translated_levels[$level] = date($name);
+            } else {
+                $translated_levels[$level] = $name;
+            }
+
+        }
+    }
 }
