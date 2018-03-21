@@ -4,4 +4,5 @@ core = 7.x
 
 files[] = phylogram_datatransfer.config
 
-files[] = src/export_model/PhyloDataStorageInterface.php
+files[] = src/export_model/PhyloDataStorage.php
+files[] = src/export_model/FolderNaming.php
