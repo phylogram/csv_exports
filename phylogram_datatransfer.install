@@ -5,3 +5,70 @@
  * Date: 21.03.18
  * Time: 13:39
  */
+/**
+ * Imlements hook_schema()
+ */
+function phylogram_datatransfer_schema() {
+  $schema = [];
+
+  /**
+   * @var $schema ['phylogram_datatransfer_export_time'] array Stores successful data transfers
+   */
+  $schema['phylogram_datatransfer_export_time'] = [
+    'description' => 'Stores successful data-export',
+    'fields' => [
+      'id' => [
+        'description' => 'id',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'topic' => [
+        'description' => 'the topic of the data',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 'unknown',
+      ],
+      'access' => [
+        'description' => 'the last time data was successfully exported',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ],
+    ],
+    'unique keys' => ['id' => ['id'],],
+    'primary key' => ['id'],
+  ];
+
+  /**
+   * @var $schema ['phylogram_datatransfer_blacklist'] array A blacklist of e-mail-adresses not to transfer
+   */
+  $schema['phylogram_datatransfer_blacklist'] = [    # To Do: Question: E-Mail-adress, name?
+    'description' => 'Stores e-mail adresses that should not be stored',
+    # To Do: Store what should not be stored?!
+    'fields' => [
+      'id' => [
+        'description' => 'id',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'email_adress' => [
+        'description' => 'e-mail-adress to be excluded',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'description' => 'creation time of entry',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+    ],
+    'unique keys' => ['id' => ['id'],],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
