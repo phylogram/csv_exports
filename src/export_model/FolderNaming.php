@@ -31,7 +31,7 @@ class FolderNaming {
         $translated_levels[$level] = $topic;
       }
     }
-    
+
     return $translated_levels;
   }
 }
