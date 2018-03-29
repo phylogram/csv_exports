@@ -42,7 +42,7 @@ class ExportCSV {
     $this->start = $start; # To Do: If last: get from database
     $this->stop = $stop;
     $this->mode = $mode;
-    $this->smallestTimeFrame = Drupal\phylogram_datatransfer\ctrl\Time::smallestTimeFrame(phylogram_datatransfer_folder_tree);
+    $this->smallestTimeFrame = Time::smallestTimeFrame(phylogram_datatransfer_folder_tree);
     $this->exclude = $exclude ? $exclude : [];
   }
 
@@ -66,13 +66,14 @@ class ExportCSV {
         continue;
       }
 
-      $class = 'Drupal\\phylogram_datatransfer\\import_model\\imports\\' . $filename;
+      $class = '\\Drupal\\phylogram_datatransfer\\import_model\\imports\\' . $filename;
 
 
       # if start = last, database query, if query 0 ask $filename
 
       if ($this->start === 'last') {
-        $last_access = Drupal\phylogram_datatransfer\import_model\AccessTime::getLast($filename);
+
+        $last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast($filename);
         $last_access = !$last_access ? $class::getOldestEntryTime() : $last_access;
         $start = $last_access;
       }
@@ -82,12 +83,13 @@ class ExportCSV {
 
       $database_topic_query = new $class($start, $this->stop);
 
-      $time_frames = Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames($start, $this->stop, current($this->smallestTimeFrame));
+      $time_frames = \Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames($start, $this->stop, current($this->smallestTimeFrame));
+
       foreach ($time_frames as $time_frame) {
 
         # create file & write headers if new or mode = 'w'
-        $folder_names = Drupal\phylogram_datatransfer\export_model\FolderNaming::translateTime(phylogram_datatransfer_folder_tree, $filename, $time_frame['start']);
-        $folders = new Drupal\phylogram_datatransfer\export_model\Storage(PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER, $folder_names, PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION);
+        $folder_names = \Drupal\phylogram_datatransfer\export_model\FolderNaming::translateTime(phylogram_datatransfer_folder_tree, $filename, $time_frame['start']);
+        $folders = new \Drupal\phylogram_datatransfer\export_model\Storage(PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER, $folder_names, PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION);
         $write_headers = !$folders->fileExists() || $this->mode === 'w';
         $folders->openFile($this->mode);
         if ($write_headers) {
@@ -104,7 +106,7 @@ class ExportCSV {
 
           # validate
           foreach ($exclude_columns as $exclude_column) {
-            $exclude = Drupal\phylogram_datatransfer\import_model\Blacklist::contains($row[$exclude_column]);
+            $exclude = \Drupal\phylogram_datatransfer\import_model\Blacklist::contains($row[$exclude_column]);
             if ($exclude) {
               continue;
             }

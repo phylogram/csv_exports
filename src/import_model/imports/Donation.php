@@ -7,7 +7,7 @@
  */
 namespace Drupal\phylogram_datatransfer\import_model\imports;
 
-class Donation implements Drupal\phylogram_datatransfer\import_model\ImportInterface {
+class Donation implements \Drupal\phylogram_datatransfer\import_model\ImportInterface {
 
   public $start;
 
