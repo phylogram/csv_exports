@@ -90,12 +90,14 @@ class Time {
   }
 
   public static function iterateCalenderTimeFrames(string $start, string $stop, string $smallest_time_frame) {
+
     $start_frame = new \DateTime($start);
     $end_frame = clone($start_frame);
 
     $end_frame->modify("first day of next $smallest_time_frame"); # To Do: If less then day -> timezone not found in database error
 
     $stop_date = new \DateTime($stop);
+
 
     while ($end_frame->getTimestamp() < $stop_date->getTimestamp()) {
       yield ['start' => $start_frame, 'stop' => $end_frame];
@@ -104,7 +106,7 @@ class Time {
     }
 
     # if there is a fraction of a month left
-    if (!$end_frame->getTimestamp() === $stop_date->getTimestamp()) {
+    if ($end_frame->getTimestamp() > $stop_date->getTimestamp()) {
       yield ['start' => $start_frame, 'stop' => $stop_date];
     }
   }

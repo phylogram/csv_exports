@@ -86,7 +86,6 @@ class ExportCSV {
       $time_frames = \Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames($start, $this->stop, current($this->smallestTimeFrame));
 
       foreach ($time_frames as $time_frame) {
-
         # create file & write headers if new or mode = 'w'
         $folder_names = \Drupal\phylogram_datatransfer\export_model\FolderNaming::translateTime(phylogram_datatransfer_folder_tree, $filename, $time_frame['start']);
         $folders = new \Drupal\phylogram_datatransfer\export_model\Storage(PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER, $folder_names, PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION);
