@@ -90,7 +90,7 @@ class Time {
   }
 
   public static function iterateCalenderTimeFrames(string $start, string $stop, string $smallest_time_frame) {
-    $start_frame = new Datetime($start);
+    $start_frame = new \DateTime($start);
     $end_frame = clone($start_frame);
 
     $end_frame->modify("first day of next $smallest_time_frame"); # To Do: If less then day -> timezone not found in database error
