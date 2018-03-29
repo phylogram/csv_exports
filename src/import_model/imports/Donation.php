@@ -67,9 +67,9 @@ STM3;
     $file = fopen('/home/phylogram/log', 'a');
     fwrite($file, $start);
     fclose($file);
-    $dt1 = new DateTime($start);
+    $dt1 = new \DateTime($start);
     $this->start = $dt1->getTimestamp();
-    $dt2 = new DateTime($stop);
+    $dt2 = new \DateTime($stop);
     $this->stop = $dt2->getTimestamp();
 
     $this->query = db_query($this->main_stm, [
