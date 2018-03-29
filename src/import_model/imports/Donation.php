@@ -96,6 +96,7 @@ STM3;
       'Campaign',
       'Payment Status',
     ];
+    return $main_header;
   }
 
   /**
