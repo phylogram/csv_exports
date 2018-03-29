@@ -41,7 +41,9 @@ class Storage {
     foreach($this->folder_array as $folder) {
       $path .= DIRECTORY_SEPARATOR;
       $path .= $folder;
-      drupal_mkdir($path);
+      if (!is_dir($path)) {
+        drupal_mkdir($path);
+      }
     }
 
     drupal_mkdir($this->folder_path);
