@@ -93,7 +93,7 @@ class ExportCSV {
         $write_headers = !$folders->fileExists() || $this->mode === 'w';
         $folders->openFile($this->mode);
         if ($write_headers) {
-          $header = $database_topic_query->getHeaders();
+          $header = $database_topic_query->getHeader();
           # Do Stuff with it
           $folders->writeFile($header, PHYLOGRAM_DATATRANSFER_CSV_DELIMITER, PHYLOGRAM_DATATRANSFER_CSV_ENCLOSURE, PHYLOGRAM_DATATRANSFER_CSV_ESCAPE_CHAR);
         }
