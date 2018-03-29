@@ -141,7 +141,7 @@ STM3;
   public static function getOldestEntryTime(): string {
     $query = db_query(self::$oldest_entry_stm);
     $unix_tmstp = $query->fetchField();
-    $dt = new Datetime();
+    $dt = new \Datetime();
     $dt->setTimestamp($unix_tmstp);
     $string = $dt->format('Y-m-d');
     return $string;
