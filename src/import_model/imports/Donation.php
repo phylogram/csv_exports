@@ -44,7 +44,7 @@ SELECT replace(payment_status_item.status, 'payment_status_', '') AS 'Payment St
        AND campaignion_activity.activity_id = campaignion_activity_payment.activity_id
        AND campaignion_activity_webform.activity_id = campaignion_activity.activity_id
        )
- WHERE campaignion_activity_webform.sid = .sid
+ WHERE campaignion_activity_webform.sid = :sid
 ORDER BY payment_status_item.created DESC
    LIMIT 1
 STM2;
