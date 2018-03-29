@@ -21,7 +21,8 @@ class FolderNaming {
    */
   static public function translateTime(array $levels, string $topic, $timestamp = NULL): array {
     $translated_levels = [];
-    $timestamp = time() ? !$timestamp : $timestamp;
+    $timestamp = !$timestamp ? time() : $timestamp;
+
     foreach ($levels as $level => $array) {
       if (array_key_exists('time', $array)) {
         $translated_levels[$level] = date($array['time'], $timestamp);

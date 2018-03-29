@@ -28,14 +28,19 @@ class Storage {
   protected $file;
 
   public function __construct($data_path, $levels, $file_extension = 'csv') {
-    $this->data_path = $data_path ? $data_path[-1] === DIRECTORY_SEPARATOR : $data_path . DIRECTORY_SEPARATOR;
+
+    $this->data_path = substr($data_path, -1) === DIRECTORY_SEPARATOR ? $data_path : $data_path . DIRECTORY_SEPARATOR;
+    echo DIRECTORY_SEPARATOR;
     $this->path_array = $levels;
     $this->file_name = array_pop($levels);
     $this->folder_array = $levels;
     $this->file_extension = $file_extension;
     $this->folder_path = $this->data_path . implode(DIRECTORY_SEPARATOR, $this->folder_array) . DIRECTORY_SEPARATOR;
+
     drupal_mkdir($this->folder_path);
-    $this->full_file_name = $this->folder_path . $this->file_name . DIRECTORY_SEPARATOR . $this->file_extension;
+
+    $this->full_file_name = $this->folder_path . $this->file_name . '.' . $this->file_extension;
+
   }
 
   public function fileExists(): bool {
