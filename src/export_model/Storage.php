@@ -30,12 +30,19 @@ class Storage {
   public function __construct($data_path, $levels, $file_extension = 'csv') {
 
     $this->data_path = substr($data_path, -1) === DIRECTORY_SEPARATOR ? $data_path : $data_path . DIRECTORY_SEPARATOR;
-    echo DIRECTORY_SEPARATOR;
     $this->path_array = $levels;
     $this->file_name = array_pop($levels);
     $this->folder_array = $levels;
     $this->file_extension = $file_extension;
     $this->folder_path = $this->data_path . implode(DIRECTORY_SEPARATOR, $this->folder_array) . DIRECTORY_SEPARATOR;
+
+    # due to bug: drupal_mkdir does not set permissions to directories it created recursively https://www.drupal.org/project/drupal/issues/1068266
+    $path = $data_path;
+    foreach($this->folder_array as $folder) {
+      $path .= DIRECTORY_SEPARATOR;
+      $path .= $folder;
+      drupal_mkdir($path);
+    }
 
     drupal_mkdir($this->folder_path);
 
