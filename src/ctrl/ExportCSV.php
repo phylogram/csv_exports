@@ -90,7 +90,7 @@ class ExportCSV {
         $this_time = $time_frame['start'];
         $folder_names = \Drupal\phylogram_datatransfer\export_model\FolderNaming::translateTime(phylogram_datatransfer_folder_tree, $filename, $this_time->getTimestamp());
         $folders = new \Drupal\phylogram_datatransfer\export_model\Storage(PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER, $folder_names, PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION);
-        $write_headers = !$folders->fileExists() || $this->mode === 'w';
+        $write_headers = !$folders->fileExists() || $this->mode === 'w'; # To Do: if file exists with no headers (eg due to an error), no headers, will be written
         $folders->openFile($this->mode);
         if ($write_headers) {
           $header = $database_topic_query->getHeader();
