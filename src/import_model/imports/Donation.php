@@ -5,9 +5,9 @@
  * Date: 28.03.18
  * Time: 11:48
  */
+namespace Drupal\phylogram_datatransfer\import_model\imports;
 
-
-class PyhlogramDataTransferDonation {
+class Donation implements Drupal\phylogram_datatransfer\import_model\ImportInterface {
 
   public $start;
 
@@ -58,7 +58,7 @@ STM3;
 
 
   /**
-   * PhylogramDataTransferImportInterface constructor.
+   * ImportInterface constructor.
    *
    * @param string $start TimeString
    * @param string $stop TimeString

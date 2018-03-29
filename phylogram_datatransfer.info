@@ -4,12 +4,4 @@ core = 7.x
 
 files[] = phylogram_datatransfer.config
 
-files[] = src/ctrl/PhylogramDataTransferExportCSV.php
-files[] = src/ctrl/PhylogramDataTransferTime.php
-
-files[] = src/import_model/PhylogramDataTransferAccessTime.php
-files[] = src/import_model/PhylogramDataTransferBlacklist.php
-files[] = src/import_model/PhylogramDataTransferImportInterface.php
-
-files[] = src/export_model/PhylogramDataTransferFolderNaming.php
-files[] = src/export_model/PhylogramDataTransferStorage.php
+dependencies[] = xautoload (>= 7.x-5.0)

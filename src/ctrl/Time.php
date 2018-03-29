@@ -5,8 +5,9 @@
  * Date: 27.03.18
  * Time: 14:47
  */
+namespace Drupal\phylogram_datatransfer\ctrl;
 
-class PhylogramDataTransferTime {
+class Time {
 
   public static $time_string_conversions = [
     # Days

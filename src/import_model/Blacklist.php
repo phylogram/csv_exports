@@ -6,7 +6,9 @@
  * Time: 09:26
  */
 
-class PhylogramDataTransferBlacklist {
+namespace Drupal\phylogram_datatransfer\import_model;
+
+class Blacklist {
 
   /**
    *

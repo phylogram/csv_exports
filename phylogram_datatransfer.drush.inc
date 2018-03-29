@@ -81,7 +81,7 @@ function drush_phylogram_datatransfer_export_csv() {
     $exclude = str_replace("'", '', $exclude); # To Do: necessary?
     $exclude = explode(' ', $exclude);
   }
-  $phylogram_datatransfer_export_csv = new PhylogramDataTransferExportCSV($start, $stop, $mode, $exclude);
+  $phylogram_datatransfer_export_csv = new Drupal\phylogram_datatransfer\ctrl\ExportCSV($start, $stop, $mode, $exclude);
   $success = $phylogram_datatransfer_export_csv->excecute();
 
 }

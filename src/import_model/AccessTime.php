@@ -5,8 +5,9 @@
  * Date: 27.03.18
  * Time: 19:59
  */
+namespace Drupal\phylogram_datatransfer\import_model;
 
-class PhylogramDataTransferAccessTime {
+class AccessTime {
 
   /**
    * @param string $topic

@@ -6,10 +6,10 @@
  * Time: 17:28
  */
 
-namespace src\export_model;
+namespace Drupal\phylogram_datatransfer\export_model;
 
 
-class PhylogramDataTransferStorage {
+class Storage {
 
   protected $data_path = '.';
 

@@ -6,10 +6,10 @@
  * Time: 19:31
  */
 
-namespace src\export_model;
+namespace Drupal\phylogram_datatransfer\export_model;
 
 
-class PhylogramDataTransferFolderNaming {
+class FolderNaming {
 
   /**
    * replaces current time in array('time' => stuff)

@@ -6,10 +6,12 @@
  * Time: 20:16
  */
 
-interface PhylogramDataTransferImportInterface {
+namespace Drupal\phylogram_datatransfer\import_model;
+
+interface ImportInterface {
 
   /**
-   * PhylogramDataTransferImportInterface constructor.
+   * ImportInterface constructor.
    *
    * @param string $start TimeString
    * @param string $stop TimeString
