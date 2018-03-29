@@ -46,8 +46,6 @@ class Storage {
       }
     }
 
-    drupal_mkdir($this->folder_path);
-
     $this->full_file_name = $this->folder_path . $this->file_name . '.' . $this->file_extension;
 
   }
