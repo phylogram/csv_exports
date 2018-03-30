@@ -59,7 +59,9 @@ class Storage {
   }
 
   public function openFile(string $mode) {
+
     $this->file = fopen($this->full_file_name, $mode);
+
   }
 
   /**
