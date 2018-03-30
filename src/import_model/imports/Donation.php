@@ -87,6 +87,8 @@ STM3;
       'Completed',
       'Modified',
       'Remote Adress',
+      'Referer',
+      'External_Referer',
       'Source',
       'Medium',
       'Version',
@@ -125,7 +127,6 @@ STM3;
    */
   public function fetchRow() {
     while ($row = $this->query->fetchAssoc()) {
-      $nid = $row['nid'];
       $sid = $row['sid'];
 
       $payment_query = db_query($this->payment_status_stm, ['sid' => $sid]);
