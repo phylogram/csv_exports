@@ -1,10 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: phylogram – Philip Röggla
  * Date: 27.03.18
  * Time: 14:47
  */
+
 namespace Drupal\phylogram_datatransfer\ctrl;
 
 class Time {
@@ -42,7 +44,7 @@ class Time {
    *
    * @return array ['level => time-frame-string]
    */
-  public static function smallestTimeFrame(array $levels): array {
+  public static function smallestTimeFrame(array $levels) {
 
     # Filter non time data
     $time_values = [];

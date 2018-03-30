@@ -1,10 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: phylogram – Philip Röggla
  * Date: 27.03.18
  * Time: 14:35
  */
+
 namespace Drupal\phylogram_datatransfer\ctrl;
 
 module_load_include('config', 'phylogram_datatransfer', 'phylogram_datatransfer');
@@ -51,7 +53,7 @@ class ExportCSV {
    *
    * @return bool on success
    */
-  public function excecute(): bool {
+  public function execute() {
     # get files from directory
     $filenames = scandir(PHYLOGRAM_DATATRANSFER_IMPORT_TOPIC_FOLDER);
 

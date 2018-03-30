@@ -18,14 +18,14 @@ interface ImportInterface {
    */
   public function __construct(string $start, string $stop);
 
-  public function getHeader(): array;
+  public function getHeader();
 
   /**
    * Columns with e-mail-adress in it, to exclude
    *
    * @return array
    */
-  public function getNameColumns(): array;
+  public function getNameColumns();
 
   /**
    * actually starts the main query
@@ -46,5 +46,5 @@ interface ImportInterface {
    *
    * @return string
    */
-  public static function getOldestEntryTime(): string;
+  public static function getOldestEntryTime();
 }

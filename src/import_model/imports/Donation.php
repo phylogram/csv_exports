@@ -78,7 +78,7 @@ STM3;
     ]);
   }
 
-  public function getHeader(): array {
+  public function getHeader() {
     $main_header = [
       'nid',
       'sid',
@@ -106,7 +106,7 @@ STM3;
    *
    * @return array
    */
-  public function getNameColumns(): array {
+  public function getNameColumns() {
     return [];
   }
 
@@ -140,7 +140,7 @@ STM3;
    *
    * @return string
    */
-  public static function getOldestEntryTime(): string {
+  public static function getOldestEntryTime() {
     $query = db_query(self::$oldest_entry_stm);
     $unix_tmstp = $query->fetchField();
     $dt = new \Datetime();

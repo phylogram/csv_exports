@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: phylogram
@@ -19,7 +20,7 @@ class FolderNaming {
    *
    * @return array
    */
-  static public function translateTime(array $levels, string $topic, $timestamp = NULL): array {
+  static public function translateTime(array $levels, string $topic, $timestamp = NULL) {
     $translated_levels = [];
     $timestamp = !$timestamp ? time() : $timestamp;
 

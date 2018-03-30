@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: phylogram – Philip Röggla
@@ -85,7 +86,7 @@ function drush_phylogram_datatransfer_export_csv() {
     $exclude = explode(' ', $exclude);
   }
   $phylogram_datatransfer_export_csv = new \Drupal\phylogram_datatransfer\ctrl\ExportCSV($start, $stop, $mode, $exclude);
-  $success = $phylogram_datatransfer_export_csv->excecute();
+  $success = $phylogram_datatransfer_export_csv->execute();
 
 }
 

@@ -50,7 +50,7 @@ class Storage {
 
   }
 
-  public function fileExists(): bool {
+  public function fileExists() {
     return file_exists($this->full_file_name);
   }
 
