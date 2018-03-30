@@ -40,10 +40,13 @@ function phylogram_datatransfer_drush_command() {
   return $items;
 }
 
+
 /**
- * Implements drush_command_validate().
+ * Implements drush_hook_COMMAND_validate().
+ *
+ * @hook validate
  */
-function drush_export_csv_validate() {
+function drush_phylogram_datatransfer_export_csv_validate() {
   $start = drush_get_option('start', $default = PHYLOGHRAM_DATATRANSFER_DEFAULT_START_EXPORT);
   if ($start !== 'last') {
     try {
@@ -61,8 +64,7 @@ function drush_export_csv_validate() {
   }
 
   $mode = drush_get_option('mode', $default = PHYLOGRAM_DATATRANSFER__DEFAULT_FILE_MODE);
-
-  if ($mode !== 'a' || $mode !== 'w') {
+  if ($mode !== 'a' && $mode !== 'w') {
     return drush_set_error('WRONG FILE MODE', 'Please use file mode "a" for appending to files, or "w" for overwriting files');
   }
 }
@@ -75,6 +77,7 @@ function drush_phylogram_datatransfer_export_csv() {
   $start = drush_get_option('start', $default = PHYLOGHRAM_DATATRANSFER_DEFAULT_START_EXPORT);
   $stop = drush_get_option('stop', $default = PHYLOGRAM_DATATRANSFER__DEFAULT_END_EXPORT);
   $mode = drush_get_option('mode', $default = PHYLOGRAM_DATATRANSFER__DEFAULT_FILE_MODE);
+
   $exclude = drush_get_option('exclude');
   if ($exclude) {
     $exclude = str_replace('""', '', $exclude); # To Do: necessary?
