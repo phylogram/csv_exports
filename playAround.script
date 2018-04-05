@@ -1,0 +1,14 @@
+#! /usr/share/php/drush/drush.php
+
+drush_print("HELLO\n\n");
+
+$query = new EntityFieldQuery();
+$query->entityCondition('entity_type', 'redhen_contact');
+
+$result = $query->execute();
+
+$result = entity_load('redhen_contact', array_keys($result['redhen_contact']));
+
+$file = fopen('/var/www/campaignion_starterkit/sites/all/modules/phylogram_datatransfer/fields/redhen_contactNEW.json', 'w');
+fwrite($file, json_encode($result));
+fclose($file);

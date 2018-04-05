@@ -95,7 +95,6 @@ class Time {
 
     $start_frame = new \DateTime($start);
     $end_frame = clone($start_frame);
-
     $end_frame->modify("first day of next $smallest_time_frame"); # To Do: If less then day -> timezone not found in database error
 
     $stop_date = new \DateTime($stop);

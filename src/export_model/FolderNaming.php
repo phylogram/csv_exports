@@ -20,19 +20,14 @@ class FolderNaming {
    *
    * @return array
    */
-  static public function translateTime(array $levels, string $topic, $timestamp = NULL) {
-    $translated_levels = [];
+  static public function translateTime(string $folder_structure, string $topic, $timestamp = NULL) {
     $timestamp = !$timestamp ? time() : $timestamp;
+    $translation = date($folder_structure, $timestamp);
+    $translation = substr($translation, -1) === DIRECTORY_SEPARATOR ? $translation : $translation . DIRECTORY_SEPARATOR;
+    $translation = $translation[0] === DIRECTORY_SEPARATOR ? substr($translation, 1) : $translation;
+    $translation .= $topic;
+    $translation = explode(DIRECTORY_SEPARATOR, $translation);
 
-    foreach ($levels as $level => $array) {
-      if (array_key_exists('time', $array)) {
-        $translated_levels[$level] = date($array['time'], $timestamp);
-      }
-      else {
-        $translated_levels[$level] = $topic;
-      }
-    }
-
-    return $translated_levels;
+    return $translation;
   }
 }

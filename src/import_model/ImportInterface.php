@@ -15,17 +15,9 @@ interface ImportInterface {
    *
    * @param string $start TimeString
    * @param string $stop TimeString
-   */
-  public function __construct(string $start, string $stop);
-
-  public function getHeader();
-
-  /**
-   * Columns with e-mail-adress in it, to exclude
    *
-   * @return array
    */
-  public function getNameColumns();
+  public function __construct(string $start, string $stop, array $fields);
 
   /**
    * actually starts the main query

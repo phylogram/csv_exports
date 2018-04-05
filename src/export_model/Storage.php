@@ -38,6 +38,7 @@ class Storage {
 
     # due to bug: drupal_mkdir does not set permissions to directories it created recursively https://www.drupal.org/project/drupal/issues/1068266
     $path = $data_path;
+
     foreach($this->folder_array as $folder) {
       $path .= DIRECTORY_SEPARATOR;
       $path .= $folder;
@@ -80,9 +81,9 @@ class Storage {
    *
    * @return bool|int
    */
-  public function writeFile(array $row, string $delimiter, string $enclosure) {
+  public function writeFile(array $row, string $delimiter, string $enclosure, string $escape_char) {
 
-    return fputcsv($this->file, $row, $delimiter, $enclosure, $enclosure);
+    return fputcsv($this->file, $row, $delimiter, $enclosure, $escape_char);
 
   }
 

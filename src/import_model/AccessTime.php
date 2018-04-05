@@ -31,4 +31,11 @@ STM;
   }
 
 
+  public static function setLast(string $topic, $unix_timestamp) {
+    $table = db_insert('phylogram_datatransfer_export_time');
+    $table->fields(array(
+      'topic' => $topic,
+      'access' => $unix_timestamp));
+    $table->execute();
+  }
 }
