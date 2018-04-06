@@ -20,21 +20,21 @@ interface ImportInterface {
   public function __construct(string $start, string $stop, array $fields);
 
   /**
-   * actually starts the main query
+   * Actually starts the main query.
    *
    * @return mixed
    */
   public function execute();
 
   /**
-   * Like db-fetch
+   * Like db-fetch.
    *
    * @return array
    */
   public function fetchRow();
 
   /**
-   * Oldest entry in main table concerning topic
+   * Oldest entry in main table concerning topic.
    *
    * @return string
    */

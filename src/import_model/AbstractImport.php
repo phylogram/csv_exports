@@ -11,6 +11,8 @@ namespace Drupal\phylogram_datatransfer\import_model;
 
 abstract class AbstractImport implements ImportInterface {
 
+    public static $oldest_entry_stm;
+
 	public $start;
 	public $stop;
 
@@ -19,7 +21,21 @@ abstract class AbstractImport implements ImportInterface {
 
 	public $row;
 
-	static $oldest_entry_stm;
+    /**
+     * Sets $this->query.
+     */
+    abstract protected function _query();
+
+    /**
+     * Sets $this->row.
+     */
+    abstract protected  function _getRow();
+
+    /**
+     * Executes $this->query.
+     */
+    abstract public function execute();
+
 
 	public function __construct( string $start, string $stop, array $fields ) {
 		$dt1 = new \DateTime($start);
@@ -31,8 +47,6 @@ abstract class AbstractImport implements ImportInterface {
 		$this->_prepare();
 		$this->_query();
 	}
-
-	abstract public function execute();
 
 	public function fetchRow() {
 		while ($this->row = $this->_getRow()) {
@@ -53,6 +67,15 @@ abstract class AbstractImport implements ImportInterface {
 		return $string;
 	}
 
+    public function getExportNames() {
+        return array_column($this->fields, 'export_name');
+    }
+
+    public function getImportNames() {
+        return array_column($this->fields, 'import_name');
+    }
+
+
 	/**
 	 * Returns an array of fields, suitable for ordering and querying
 	 *
@@ -64,36 +87,20 @@ abstract class AbstractImport implements ImportInterface {
 		return array_combine(array_column($fields, 'export_name'), array_column($fields, 'import_name'));
 	}
 
-	/**
-	 * @return mixed Entity Field Query
-	 */
-	protected abstract function _query();
+    /**
+     * Stub, to be overridden by child classes. Is called in __construct() after
+     * _createFields and _query()
+     *
+     * Suitable for defining fields in sql statements for example.
+     *
+     * @return bool
+     *
+     */
+    protected function _prepare() {
+        return TRUE;
+    }
 
-	/**
-	 * Stub, to be overridden by child classes. Is called in __construct() after
-	 * _createFields and _query()
-	 *
-	 * Suitable for defining fields in sql statements for example.
-	 *
-	 * @return bool
-	 *
-	 */
-	protected function _prepare() {
-		return TRUE;
-	}
-
-	public function getExportNames() {
-		return array_column($this->fields, 'export_name');
-	}
-
-	public function getImportNames() {
-		return array_column($this->fields, 'import_name');
-	}
-
-	protected abstract function _getRow();
-
-	protected function _modifyRow() {
-		return True;
-	}
-
+    protected function _modifyRow() {
+        return True;
+    }
 }

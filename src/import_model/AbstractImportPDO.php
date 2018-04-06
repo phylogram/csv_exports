@@ -13,6 +13,12 @@ abstract class AbstractImportPDO extends AbstractImport {
 
 	public $stm_0;
 
+    /**
+     * Creates the main/first sql statement.
+     * @param string $fields SELECT $fields FROM ...
+     */
+    abstract protected function _create_stm_0(string $fields);
+
 	/**
 	 * We use db_select, so execution has already happened.
 	 *
@@ -33,12 +39,15 @@ abstract class AbstractImportPDO extends AbstractImport {
 		return $this->query->fetchAssoc();
 	}
 
+    /**
+     * Creates the field list for the select statement and passes it to the right method(s).
+     *
+     * SELECT $fields FROM ...
+     */
 	protected function _prepare() {
 		$fields = $this->getImportNames();
 		$fields = implode(', ', $fields);
 		$this->_create_stm_0($fields);
 	}
-
-	abstract protected function _create_stm_0(string $fields);
 }
 
