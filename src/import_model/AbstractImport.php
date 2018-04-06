@@ -48,6 +48,14 @@ abstract class AbstractImport implements ImportInterface {
 		$this->_query();
 	}
 
+    /**
+     * @return int
+     */
+    public function getStart(): int
+    {
+        return $this->start;
+    }
+
 	public function fetchRow() {
 		while ($this->row = $this->_getRow()) {
 			$this->_modifyRow();

@@ -55,8 +55,6 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO
                     'start' => $this->start,
                     'stop' => $this->stop,
                 ]);
-
-
             }
         }
     }
