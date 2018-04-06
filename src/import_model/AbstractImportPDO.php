@@ -11,7 +11,10 @@ namespace Drupal\phylogram_datatransfer\import_model;
 
 abstract class AbstractImportPDO extends AbstractImport {
 
-	public $stm_0;
+	protected $statement_property_stub = 'stm_';
+    protected $create_statement_method_stub = '_create_stm_'; # 0, 1, 2
+
+    public $stm_0;
 
     /**
      * Creates the main/first sql statement.
@@ -47,7 +50,12 @@ abstract class AbstractImportPDO extends AbstractImport {
 	protected function _prepare() {
 		$fields = $this->getImportNames();
 		$fields = implode(', ', $fields);
-		$this->_create_stm_0($fields);
+        $this->_createStatements();
 	}
+
+	protected function _createStatements() {
+	    $this->_create_stm_0();
+    }
 }
+
 
