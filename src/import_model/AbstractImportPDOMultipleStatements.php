@@ -48,7 +48,7 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO
                 # To Do:
                 # find property $statement_where_condition_property_stub (array/string)
                 # Add to query with somehow comparision to ... [sid] or else (passing?)
-                # fetch and add to row [with table_names]
+                # fetch and add to row [with table_names if already in row]
 
                 # Use _query
                 $query = db_query($this->$property, [
