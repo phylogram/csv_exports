@@ -132,7 +132,7 @@ STM2;
       $sid = $row['sid'];
       $payment_query = db_query($this->payment_stm, ['sid' => $sid]);
       $row['Payment Status'] = $payment_query->fetchField();
-
+      
       // Order it
       $ordered_row = [];
       foreach ($this->fields as $field) {

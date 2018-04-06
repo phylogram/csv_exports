@@ -15,6 +15,11 @@ abstract class AbstractImport implements ImportInterface {
 	public $stop;
 
 	public $fields;
+	public $query;
+
+	public $row;
+
+	static $oldest_entry_stm;
 
 	public function __construct( string $start, string $stop, array $fields ) {
 		$dt1 = new \DateTime($start);
@@ -22,16 +27,31 @@ abstract class AbstractImport implements ImportInterface {
 		$dt2 = new \DateTime($stop);
 		$this->stop = $dt2->getTimestamp();
 
-		$this->fields = $this->_createFields($fields);
-
-		$this->query = $this->_query();
+		$this->_createFields($fields);
+		$this->_prepare();
+		$this->_query();
 	}
 
 	abstract public function execute();
 
-	abstract public function fetchRow();
+	public function fetchRow() {
+		while ($this->row = $this->_getRow()) {
+			$this->_modifyRow();
+			yield $this->row;
+		}
+	}
 
-	abstract public static function getOldestEntryTime();
+	/**
+	 * @return string oldest entry time as Y-m-d
+	 */
+	public static function getOldestEntryTime() {
+		$query = db_query(self::$oldest_entry_stm);
+		$unix_tmstp = $query->fetchField();
+		$dt = new \Datetime();
+		$dt->setTimestamp($unix_tmstp);
+		$string = $dt->format('Y-m-d');
+		return $string;
+	}
 
 	/**
 	 * Returns an array of fields, suitable for ordering and querying
@@ -48,5 +68,32 @@ abstract class AbstractImport implements ImportInterface {
 	 * @return mixed Entity Field Query
 	 */
 	protected abstract function _query();
+
+	/**
+	 * Stub, to be overridden by child classes. Is called in __construct() after
+	 * _createFields and _query()
+	 *
+	 * Suitable for defining fields in sql statements for example.
+	 *
+	 * @return bool
+	 *
+	 */
+	protected function _prepare() {
+		return TRUE;
+	}
+
+	public function getExportNames() {
+		return array_column($this->fields, 'export_name');
+	}
+
+	public function getImportNames() {
+		return array_column($this->fields, 'import_name');
+	}
+
+	protected abstract function _getRow();
+
+	protected function _modifyRow() {
+		return True;
+	}
 
 }
