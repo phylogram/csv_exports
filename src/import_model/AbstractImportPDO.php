@@ -50,7 +50,7 @@ abstract class AbstractImportPDO extends AbstractImport {
 	protected function _prepare() {
 		$fields = $this->getImportNames();
 		$fields = implode(', ', $fields);
-        $this->_createStatements();
+        $this->_createStatements($fields);
 	}
 
 	protected function _createStatements() {
