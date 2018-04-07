@@ -10,33 +10,33 @@ namespace Drupal\phylogram_datatransfer\import_model;
 
 interface ImportInterface {
 
-  /**
-   * ImportInterface constructor.
-   *
-   * @param string $start TimeString
-   * @param string $stop TimeString
-   *
-   */
-  public function __construct(string $start, string $stop, array $fields);
+	/**
+	 * ImportInterface constructor.
+	 *
+	 * @param string $start TimeString
+	 * @param string $stop TimeString
+	 *
+	 */
+	public function __construct( string $start, string $stop, array $fields );
 
-  /**
-   * Actually starts the main query.
-   *
-   * @return mixed
-   */
-  public function execute();
+	/**
+	 * Actually starts the main query.
+	 *
+	 * @return mixed
+	 */
+	public function execute();
 
-  /**
-   * Like db-fetch.
-   *
-   * @return array
-   */
-  public function fetchRow();
+	/**
+	 * Like db-fetch.
+	 *
+	 * @return array
+	 */
+	public function fetchRow();
 
-  /**
-   * Oldest entry in main table concerning topic.
-   *
-   * @return string
-   */
-  public static function getOldestEntryTime();
+	/**
+	 * Oldest entry in main table concerning topic.
+	 *
+	 * @return string
+	 */
+	public static function getOldestEntryTime();
 }

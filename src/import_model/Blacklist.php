@@ -11,21 +11,22 @@ namespace Drupal\phylogram_datatransfer\import_model;
 
 class Blacklist {
 
-  /**
-   *
-   * @return  bool
-   */
-  public static function contains(string $email_adress) {
-    # if not in database return null and ask topic
-    $stm = <<<STM
+	/**
+	 *
+	 * @return  bool
+	 */
+	public static function contains( string $email_adress ) {
+		# if not in database return null and ask topic
+		$stm = <<<STM
           SELECT phylogram_datatransfer_blacklist.email_adress
             FROM phylogram_datatransfer_blacklist
            WHERE phylogram_datatransfer_blacklist.email_adress = :email_adress;
 STM;
 
-    $query = db_query($stm, [':email_adress' => $email_adress]);
-    $result = $query->fetchField();
-    return $result == TRUE;
-  }
+		$query  = db_query( $stm, [ ':email_adress' => $email_adress ] );
+		$result = $query->fetchField();
+
+		return $result == TRUE;
+	}
 
 }
