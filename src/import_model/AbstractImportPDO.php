@@ -11,8 +11,8 @@ namespace Drupal\phylogram_datatransfer\import_model;
 
 abstract class AbstractImportPDO extends AbstractImport {
 
-	protected $statement_property_stub = 'stm_';
-	protected $create_statement_method_stub = '_create_stm_'; # 0, 1, 2
+	protected $statement_property_stub = 'stm_'; // . 0, 1, 2
+	protected $create_statement_method_stub = '_create_stm_'; // . 0, 1, 2
 
 	public $stm_0;
 

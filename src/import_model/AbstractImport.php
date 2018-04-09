@@ -36,7 +36,12 @@ abstract class AbstractImport implements ImportInterface {
 	 */
 	abstract public function execute();
 
-
+    /**
+     * AbstractImport constructor.
+     * @param string $start
+     * @param string $stop
+     * @param array $fields Is supposed to be an array of arrays with keys: import_name and _export_name, like in ctrl\TransferSettings
+     */
 	public function __construct( string $start, string $stop, array $fields ) {
 		$dt1         = new \DateTime( $start );
 		$this->start = $dt1->getTimestamp();
@@ -48,12 +53,6 @@ abstract class AbstractImport implements ImportInterface {
 		$this->_query();
 	}
 
-	/**
-	 * @return int
-	 */
-	public function getStart(): int {
-		return $this->start;
-	}
 
 	public function fetchRow() {
 		while ( $this->row = $this->_getRow() ) {
@@ -66,9 +65,9 @@ abstract class AbstractImport implements ImportInterface {
 	 * @return string oldest entry time as Y-m-d
 	 */
 	public static function getOldestEntryTime() {
-		$query      = db_query( self::$oldest_entry_stm );
+		$query = db_query( self::$oldest_entry_stm );
 		$unix_tmstp = $query->fetchField();
-		$dt         = new \Datetime();
+		$dt = new \Datetime();
 		$dt->setTimestamp( $unix_tmstp );
 		$string = $dt->format( 'Y-m-d' );
 
@@ -87,12 +86,11 @@ abstract class AbstractImport implements ImportInterface {
 	/**
 	 * Returns an array of fields, suitable for ordering and querying
 	 *
-	 * @param $fields
+	 * @param array $fields [ ['export_name'=> 'Draft', 'import_name' => 'is_draft'], ...]
 	 *
-	 * @return array
 	 */
-	protected function _createFields( $fields ) {
-		return array_combine( array_column( $fields, 'export_name' ), array_column( $fields, 'import_name' ) );
+	protected function _createFields( array $fields ) {
+		$this->fields = $fields;
 	}
 
 	/**

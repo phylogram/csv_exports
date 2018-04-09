@@ -19,7 +19,7 @@ ORDER BY submitted ASC
 STM2;
 
 	protected function _create_stm_0( string $fields ) {
-		$this->main_stm = <<<MAIN_STM
+		$this->stm_0 = <<<MAIN_STM
 SELECT $fields
   FROM campaignion_activity
   JOIN redhen_contact

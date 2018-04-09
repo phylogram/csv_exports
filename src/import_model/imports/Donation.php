@@ -8,74 +8,14 @@
 
 namespace Drupal\phylogram_datatransfer\import_model\imports;
 
-class Donation implements \Drupal\phylogram_datatransfer\import_model\ImportInterface {
+class Donation extends \Drupal\phylogram_datatransfer\import_model\AbstractImportPDOMultipleStatements {
 
-	public $start;
-	public $stop;
-
-	public $fields = [];
-
-	public $main_stm = '';
-	public $main_fields = [];
-	public $main_tables = [ 'webform_submissions', 'webform_tracking' ];
-
-	public $payment_stm = '';
-	public $payment_fields = [];
-	public $payment_tables = [
-		'payment_status_item',
-		'campaignion_activity_payment',
-		'campaignion_activity',
-		'campaignion_activity_webform',
-	];
-
-	public $query;
-
-
-	public static $oldest_entry_stm = <<<STM3
-  SELECT submitted 
-    FROM webform_submissions
-ORDER BY submitted ASC
-   LIMIT 1;
-STM3;
-
-
-	/**
-	 * ImportInterface constructor.
-	 *
-	 * @param string $start TimeString
-	 * @param string $stop TimeString
-	 */
-	public function __construct( string $start, string $stop, array $fields ) {
-		$dt1         = new \DateTime( $start );
-		$this->start = $dt1->getTimestamp();
-		$dt2         = new \DateTime( $stop );
-		$this->stop  = $dt2->getTimestamp();
-
-		// Order list of fields from config
-		// Sort them to queries
-		// We change the columns into key / value pairs so it is easier to iterate
-		$this->fields = array_combine( array_column( $fields, 'export_name' ), array_column( $fields, 'import_name' ) );
-
-
-		foreach ( $this->fields as $field ) {
-			foreach ( $this->main_tables as $main_table ) {
-				if ( strpos( $field, $main_table ) !== FALSE ) {
-					$this->main_fields[] = $field;
-				}
-			}
-			foreach ( $this->payment_tables as $payment_table ) {
-				if ( strpos( $field, $payment_table ) !== FALSE ) {
-					$this->payment_fields[] = $field;
-				}
-			}
-
-
-		}
-
-		// Fill in the fields to the query
-		// 1 – Main Statement
-		$fields         = implode( ', ', $this->main_fields );
-		$this->main_stm = <<<MAIN_STM
+	public $statement_tables_array_0 = [ 'webform_submissions', 'webform_tracking' ];
+    protected function _create_stm_0(string $fields)
+    {
+        // Making sure webform_submissions.sid is in the game, for stm_1
+        $fields .= strpos($fields, 'sid') === FALSE ? ', webform_submissions.sid': '';
+        $this->stm_0 = <<<MAIN_STM
 SELECT $fields
   FROM webform_submissions
   JOIN (webform_tracking)
@@ -89,10 +29,18 @@ SELECT $fields
           FROM node
 		 WHERE node.type = 'donation');
 MAIN_STM;
+    }
 
-		// 2 – Payment Statement
-		$fields            = implode( ', ', $this->payment_fields );
-		$this->payment_stm = <<<STM2
+    public $stm_1;
+	public $statement_tables_array_1 = [
+		'payment_status_item',
+		'campaignion_activity_payment',
+		'campaignion_activity',
+		'campaignion_activity_webform',
+	];
+
+    protected function _create_stm_1($fields) {
+        $this->stm_1 = <<<STM2
 SELECT $fields
   FROM payment_status_item
   JOIN (campaignion_activity_payment, campaignion_activity, campaignion_activity_webform)
@@ -104,60 +52,24 @@ SELECT $fields
 ORDER BY payment_status_item.created DESC
    LIMIT 1
 STM2;
+    }
 
-		// Finally state and execute the main query
-		$this->query = db_query( $this->main_stm, [
-			'start' => $this->start,
-			'stop'  => $this->stop,
-		] );
+    public function query_and_fetch_additional_data_1() {
+        $sid = $this->row['sid'];
+        $payment_query = db_query( $this->stm_1, [ 'sid' => $sid ] );
+        $row_1 = $payment_query->fetchAssoc();
+        $this->_addDataToRow($row_1, $this->statement_fields_array_1);
+    }
 
-	}
 
-	/**
-	 * In this case, we use db_select, so execution has already happened.
-	 *
-	 * @return mixed
-	 */
-	public function execute() {
-		#$this->query->execute();
-		return TRUE;
-	}
+	public static $oldest_entry_stm = <<<STM3
+  SELECT submitted 
+    FROM webform_submissions
+ORDER BY submitted ASC
+   LIMIT 1;
+STM3;
 
-	/**
-	 * Like db-fetch
-	 *
-	 * @return array
-	 */
-	public function fetchRow() {
-		while ( $row = $this->query->fetchAssoc() ) {
-			// Get additional data
-			$sid                   = $row['sid'];
-			$payment_query         = db_query( $this->payment_stm, [ 'sid' => $sid ] );
-			$row['Payment Status'] = $payment_query->fetchField();
 
-			// Order it
-			$ordered_row = [];
-			foreach ( $this->fields as $field ) {
-				$ordered_row[ $field ] = $row['field'];
-			}
 
-			yield $ordered_row;
-		}
-	}
-
-	/**
-	 * Oldest entry in main table concerning topic
-	 *
-	 * @return string
-	 */
-	public static function getOldestEntryTime() {
-		$query      = db_query( self::$oldest_entry_stm );
-		$unix_tmstp = $query->fetchField();
-		$dt         = new \Datetime();
-		$dt->setTimestamp( $unix_tmstp );
-		$string = $dt->format( 'Y-m-d' );
-
-		return $string;
-	}
 
 }
