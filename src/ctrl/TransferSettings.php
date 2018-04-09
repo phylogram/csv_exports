@@ -90,17 +90,12 @@ class TransferSettings {
 	/**
 	 * ['name'] => settings
 	 *
-	 * Use 'default' for class defaults
-	 *
 	 * @var array
 	 */
 	public $settings = [
 		'Donations'       => [
 			'class'            => '\Drupal\phylogram_datatransfer\import_model\imports\Donation',
-			'folder_structure' => 'default',
 			'file_name'        => 'Donations',
-			'file_extension'   => 'default',
-			'frequency'        => 'default',
 			'fields'           => [
 				// Please provide table_name.field_name as import_name
 				0  => [
@@ -175,10 +170,7 @@ class TransferSettings {
 		],
 		'Activity'        => [
 			'class'            => '\Drupal\phylogram_datatransfer\import_model\imports\Activity',
-			'folder_structure' => 'default',
 			'file_name'        => 'Activities',
-			'file_extension'   => 'default',
-			'frequency'        => 'default',
 			'fields'           => [
 				// Please provide table_name.field_name as import_name
 				0 => [
@@ -221,10 +213,7 @@ class TransferSettings {
 		],
 		'Actions'         => [
 			'class'            => '\Drupal\phylogram_datatransfer\import_model\imports\Action',
-			'folder_structure' => 'default',
 			'file_name'        => 'Actions',
-			'file_extension'   => 'default',
-			'frequency'        => 'default',
 			'fields'           => [
 				// Please provide table_name.field_name as import_name
 				0  => [
@@ -299,10 +288,7 @@ class TransferSettings {
 		],
 		'Redhen Contacts' => [
 			'class'            => '\Drupal\phylogram_datatransfer\import_model\imports\RedhenContact',
-			'folder_structure' => 'default',
 			'file_name'        => 'Redhen Contacts',
-			'file_extension'   => 'default',
-			'frequency'        => 'default',
 			'fields'           => [
 				// This are Entity properties/keys . %CURRENT% will be replaced, with first entry
 				0  => [
@@ -413,16 +399,17 @@ class TransferSettings {
 
 		$settings = $this->settings;
 		foreach ( $settings as $key => $topic ) {
-			foreach ( $topic as $area => $setting ) {
-				if ( $setting === 'default' ) {
-					if ( property_exists( $this, 'default_' . $area ) ) {
-						$property                        = $this->{'default_' . $area};
-						$this->settings[ $key ][ $area ] = $property;
-					} // else will lead eventually to NULL value in row
-				}
-			}
-
-		}
+			$properties = get_object_vars($this);
+			foreach ($properties as $name => $value) {
+			    if (strpos($name, 'default_') === FALSE) {
+			        continue;
+                }
+                $key = substr($name, strlen('default_'));
+			    if (!array_key_exists($topic)) {
+			        $topic[$key] = $value;
+                }
+            }
+        }
 	}
 
 
