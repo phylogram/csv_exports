@@ -13,17 +13,8 @@ module_load_include('config', 'phylogram_datatransfer', 'phylogram_datatransfer'
  * Implements hook_drush_command().
  */
 function phylogram_datatransfer_drush_command() {
-
-  $available_topics = [];
-
-  foreach (scandir(PHYLOGRAM_DATATRANSFER_IMPORT_TOPIC_FOLDER) as $file) {
-    if ($file[0] === '.') {
-      continue;
-    }
-    $topic = explode('.', $file);
-    $available_topics[] = current($topic);
-  }
-
+  $settings = new \Drupal\phylogram_datatransfer\ctrl\TransferSettings();
+  $available_topics = array_keys($settings::settings);
   $available_topics = implode(', ', $available_topics);
 
   $items['export-csv'] = [
@@ -34,7 +25,16 @@ function phylogram_datatransfer_drush_command() {
       'mode' => 'How to open and write to new lines. Default: See config. Use a to append to and w to overwrite files (See http://php.net/manual/de/function.fopen.php)',
       'exclude' => "List of topics to exclude. Separate with whitespace and surround with quoation marks. Availble topics are:\n$available_topics",
     ],
-    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_DATABASE,     # To Do: Check
+    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_DATABASE,
+  ];
+
+  $items['blacklist'] = [
+    'description' => ' Add/remove email-address to/from blacklist for export-csv',
+    'options' => [
+        'add' => 'email to add, separate lists with whitespace',
+        'remove' => 'email to remove, separate lists with whitespace'
+    ],
+    'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_DATABASE,
   ];
 
   return $items;
@@ -48,11 +48,11 @@ function phylogram_datatransfer_drush_command() {
  */
 function drush_phylogram_datatransfer_export_csv_validate() {
   $start = drush_get_option('start', $default = PHYLOGHRAM_DATATRANSFER_DEFAULT_START_EXPORT);
-  if ($start !== 'last') {
+  if ($start) {
     try {
       strtotime($start);
     } catch (Exception $error) {
-      return drush_set_error($error, "Please use 'last' or php time string");   # To Do. Test
+      return drush_set_error($error, "Please use php time string");   # To Do. Test
     }
   }
 
@@ -86,7 +86,26 @@ function drush_phylogram_datatransfer_export_csv() {
   }
   $phylogram_datatransfer_export_csv = new \Drupal\phylogram_datatransfer\ctrl\ExportCSV($start, $stop, $mode, $exclude);
   $success = $phylogram_datatransfer_export_csv->execute();
-
+    // To Do: if success, store
 }
 
-;
+/**
+ * Implements drush_COMMANDFILE_COMMANDNAME().
+ */
+function drush_phylogram_datatransfer_blacklist() {
+    $add = drush_get_option('add');
+    if ($add) {
+        $addresses = explode(' ', $add);
+        foreach ($addresses as $address) {
+            Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::add($address);
+        }
+    }
+    $remove = drush_get_option('remove');
+    if ($remove) {
+        $addresses = explode(' ', $add);
+        foreach ($addresses as $address) {
+            Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::remove($address);
+        }
+    }
+
+}

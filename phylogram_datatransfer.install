@@ -42,10 +42,10 @@ function phylogram_datatransfer_schema() {
   ];
 
   /**
-   * @var $schema ['phylogram_datatransfer_blacklist'] array A blacklist of e-mail-adresses not to transfer
+   * @var $schema ['phylogram_datatransfer_blacklist'] array A blacklist of e-mail-addresses not to transfer
    */
-  $schema['phylogram_datatransfer_blacklist'] = [    # To Do: Question: E-Mail-adress, name?
-    'description' => 'Stores e-mail adresses that should not be stored',
+  $schema['phylogram_datatransfer_blacklist'] = [    # To Do: Question: E-Mail-address, name?
+    'description' => 'Stores e-mail addresses that should not be stored',
     # To Do: Store what should not be stored?!
     'fields' => [
       'id' => [
@@ -54,8 +54,8 @@ function phylogram_datatransfer_schema() {
         'unsigned' => TRUE,
         'not null' => TRUE,
       ],
-      'email_adress' => [
-        'description' => 'e-mail-adress to be excluded',
+      'email_address' => [
+        'description' => 'e-mail-address to be excluded',
         'type' => 'varchar',
         'length' => 255,
         'not null' => TRUE,
