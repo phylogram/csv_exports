@@ -400,18 +400,26 @@ class TransferSettings
         // replace default array values with default properties
 
         $settings = $this->settings;
+        $properties = $this->getDefaultProperties();
         foreach ($settings as $key => $topic) {
-            $properties = get_object_vars($this);
-            foreach ($properties as $name => $value) {
-                if (strpos($name, 'default_') === FALSE) {
-                    continue;
-                }
-                $key = substr($name, strlen('default_'));
+            foreach ($properties as $property => $value) {
+                $key = substr($property, strlen('default_'));
                 if (!array_key_exists($key, $topic)) {
                     $topic[$key] = $value;
                 }
             }
         }
+    }
+
+    public function getDefaultProperties() {
+        $properties = get_object_vars($this);
+        $default_properties = [];
+        foreach ($properties as $property => $value) {
+            if (strpos($property, 'default_') !== FALSE) {
+                $default_properties[$property] = $value;
+            }
+        }
+        return $default_properties;
     }
 
 
