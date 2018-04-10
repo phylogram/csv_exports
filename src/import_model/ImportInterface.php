@@ -13,11 +13,12 @@ interface ImportInterface {
 	/**
 	 * ImportInterface constructor.
 	 *
-	 * @param string $start TimeString
-	 * @param string $stop TimeString
+	 * @param \DateTime $start from
+	 * @param \DateTime $stop to
+     * @param array $fields array(array('export_name' => 'Is Draft', 'import_name' => 'some_table.is_draft'), array(...), ...)
 	 *
 	 */
-	public function __construct( string $start, string $stop, array $fields );
+	public function __construct($start, $stop, array $fields );
 
 	/**
 	 * Actually starts the main query.

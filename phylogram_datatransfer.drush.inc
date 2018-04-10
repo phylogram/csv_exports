@@ -26,7 +26,6 @@ function phylogram_datatransfer_drush_command() {
 
   $available_topics = implode(', ', $available_topics);
 
-
   $items['export-csv'] = [
     'description' => 'Exports various data from campaignion to csv and stores them in custom folder structure',
     'options' => [

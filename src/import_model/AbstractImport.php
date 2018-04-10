@@ -42,11 +42,9 @@ abstract class AbstractImport implements ImportInterface {
      * @param string $stop
      * @param array $fields Is supposed to be an array of arrays with keys: import_name and _export_name, like in ctrl\TransferSettings
      */
-	public function __construct( string $start, string $stop, array $fields ) {
-		$dt1         = new \DateTime( $start );
-		$this->start = $dt1->getTimestamp();
-		$dt2         = new \DateTime( $stop );
-		$this->stop  = $dt2->getTimestamp();
+	public function __construct( $start, $stop, array $fields ) {
+		$this->start = $start->getTimestamp();
+		$this->stop  = $stop->getTimestamp();
 
 		$this->_createFields( $fields );
 		$this->_prepare();
@@ -67,7 +65,7 @@ abstract class AbstractImport implements ImportInterface {
 	public static function getOldestEntryTime() {
 		$query = db_query( self::$oldest_entry_stm );
 		$unix_tmstp = $query->fetchField();
-		$dt = new \Datetime();
+		$dt = new DateObject();
 		$dt->setTimestamp( $unix_tmstp );
 		$string = $dt->format( 'Y-m-d' );
 

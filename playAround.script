@@ -2,13 +2,13 @@
 
 drush_print("HELLO\n\n");
 
-$query = new EntityFieldQuery();
-$query->entityCondition('entity_type', 'redhen_contact');
 
-$result = $query->execute();
-
-$result = entity_load('redhen_contact', array_keys($result['redhen_contact']));
-
-$file = fopen('/var/www/campaignion_starterkit/sites/all/modules/phylogram_datatransfer/fields/redhen_contactNEW.json', 'w');
-fwrite($file, json_encode($result));
-fclose($file);
+var_dump(date_default_timezone_object());
+$date = new DateObject();
+$now = $date->getTimestamp();
+echo "now: $now\n";
+$date->modify('First day of next month');
+$later = $date->getTimestamp();
+echo "later: $later\n";
+$time_passed = $later - $now;
+echo "$$time_passed: $time_passed";

@@ -40,13 +40,12 @@ class ExportCSV {
 	 * @param array||NULL $exclude List of topics to exclude. Separate with
 	 *   whitespace and surround with quoation marks.
 	 */
-	public function __construct( string $start, string $stop, string $mode, $exclude ) {
-		$this->start = $start; # To Do: If last: get from database
-		$this->stop  = $stop;
+	public function __construct( $start, $stop, string $mode, $exclude ) {
+		$this->start = new DateObject($start); # To Do: If last: get from database
+		$this->stop  = new DateObject($stop);
 		$this->mode  = $mode;
 
 		$this->settings = new TransferSettings();
-		# $this->smallestTimeFrame = Time::smallestTimeFrame(phylogram_datatransfer_folder_tree); (delete)
 		$this->exclude = $exclude ? $exclude : [];
 	}
 
@@ -70,12 +69,11 @@ class ExportCSV {
 				// Asks for fully qualified name -> stored in the same way? To Do!
 				$last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast( $class );
 				$last_access = ! $last_access ? $class::getOldestEntryTime() : $last_access;
-				$start       = $last_access;
+				$start       = new DateObject($last_access);
 			} else {
 				$start = $this->start;
 			}
 
-			$database_topic_query = new $class( $start, $this->stop, $setting['fields'] );
 
 			$time_frames = \Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames( $start, $this->stop, $setting['frequency'] );
 
@@ -93,11 +91,10 @@ class ExportCSV {
 					$folders->writeFile( $header, PHYLOGRAM_DATATRANSFER_CSV_DELIMITER, PHYLOGRAM_DATATRANSFER_CSV_ENCLOSURE, PHYLOGRAM_DATATRANSFER_CSV_ESCAPE_CHAR );
 				}
 
-
+                $database_topic_query = new $class( $time_frame['start'], $time_frame['stop'], $setting['fields'] );
 				$database_topic_query->execute();
 
 				foreach ( $database_topic_query->fetchRow() as $row ) {
-					var_dump( $row );
 					# validate
 					foreach ( $row as $column ) {
 						$exclude = \Drupal\phylogram_datatransfer\import_model\Blacklist::contains( $row[ $column ] );
