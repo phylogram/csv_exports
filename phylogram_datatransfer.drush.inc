@@ -14,7 +14,7 @@ module_load_include('config', 'phylogram_datatransfer', 'phylogram_datatransfer'
  */
 function phylogram_datatransfer_drush_command() {
   $settings = new \Drupal\phylogram_datatransfer\ctrl\TransferSettings();
-  $available_topics = array_keys($settings::settings);
+  $available_topics = array_keys($settings->settings);
   $available_topics = implode(', ', $available_topics);
 
   $items['export-csv'] = [
