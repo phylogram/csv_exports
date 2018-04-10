@@ -41,7 +41,7 @@ class ExportCSV {
 	 *   whitespace and surround with quoation marks.
 	 */
 	public function __construct( $start, $stop, string $mode, $exclude ) {
-		$this->start = new DateObject($start); # To Do: If last: get from database
+		$this->start = $start ? new DateObject($start): $start;
 		$this->stop  = new DateObject($stop);
 		$this->mode  = $mode;
 
@@ -65,11 +65,9 @@ class ExportCSV {
 
 			# if start = last, database query, if query 0 ask $class
 
-			if ( $this->start === 'last' ) {
-				// Asks for fully qualified name -> stored in the same way? To Do!
+			if ( !$this->start) {
 				$last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast( $class );
 				$last_access = ! $last_access ? $class::getOldestEntryTime() : $last_access;
-				$start       = new DateObject($last_access);
 			} else {
 				$start = $this->start;
 			}
