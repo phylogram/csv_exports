@@ -407,7 +407,7 @@ class TransferSettings
                     continue;
                 }
                 $key = substr($name, strlen('default_'));
-                if (!array_key_exists($topic)) {
+                if (!array_key_exists($key, $topic)) {
                     $topic[$key] = $value;
                 }
             }
