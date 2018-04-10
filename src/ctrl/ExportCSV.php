@@ -68,6 +68,7 @@ class ExportCSV {
 			if ( !$this->start) {
 				$last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast( $class );
 				$last_access = ! $last_access ? $class::getOldestEntryTime() : $last_access;
+				$this->start = $last_access;
 			} else {
 				$start = $this->start;
 			}
