@@ -41,8 +41,8 @@ class ExportCSV {
 	 *   whitespace and surround with quoation marks.
 	 */
 	public function __construct( $start, $stop, string $mode, $exclude ) {
-		$this->start = $start ? new DateObject($start): $start;
-		$this->stop  = new DateObject($stop);
+		$this->start = $start ? new \DateObject($start): $start;
+		$this->stop  = new \DateObject($stop);
 		$this->mode  = $mode;
 
 		$this->settings = new TransferSettings();
