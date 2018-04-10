@@ -60,16 +60,13 @@ abstract class AbstractImport implements ImportInterface {
 	}
 
 	/**
-	 * @return string oldest entry time as Y-m-d
+	 * @return DateObject oldest entry time as Y-m-d
 	 */
 	public static function getOldestEntryTime() {
 		$query = db_query( self::$oldest_entry_stm );
 		$unix_tmstp = $query->fetchField();
-		$dt = new DateObject();
-		$dt->setTimestamp( $unix_tmstp );
-		$string = $dt->format( 'Y-m-d' );
-
-		return $string;
+		$date_object = new DateObject($unix_tmstp);
+		return $date_object;
 	}
 
 	public function getExportNames() {
