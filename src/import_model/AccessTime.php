@@ -28,7 +28,7 @@ STM;
 
 		$query  = db_query( $stm, [ ':topic' => $topic ] );
 		$result = $query->fetchField();
-
+        $result = new DateObject($result);
 		return $result;
 	}
 
