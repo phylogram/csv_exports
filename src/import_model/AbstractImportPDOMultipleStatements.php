@@ -76,7 +76,7 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
 	 * @param $fields
 	 *
 	 */
-	protected function _createFields( $fields ) {
+	protected function _createFields( array $fields ) {
         $this->_findTablesAndFields($fields);
         $this->_addSortedFieldsProperty();
         $this->_sortTablesToQueries();
