@@ -2,60 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/phylogram_datatransfer.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/design/.~lock.debug.odt#" afterPath="$PROJECT_DIR$/design/.~lock.debug.odt#" />
-      <change beforePath="$PROJECT_DIR$/design/debug.odt" afterPath="$PROJECT_DIR$/design/debug.odt" />
-      <change beforePath="$PROJECT_DIR$/design/opt_in_contact.sql" afterPath="$PROJECT_DIR$/design/opt_in_contact.sql" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_bundles.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_bundles.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_bundles.schema.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_bundles.schema.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_field_map.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_field_map.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_field_map.schema.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_field_map.schema.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_fields.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_fields.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_fields.schema.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_fields.schema.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_instances.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_instances.json" />
-      <change beforePath="$PROJECT_DIR$/fields/campaignion_field_info_instances.schema.json" afterPath="$PROJECT_DIR$/fields/campaignion_field_info_instances.schema.json" />
-      <change beforePath="$PROJECT_DIR$/fields/entity_info.json" afterPath="$PROJECT_DIR$/fields/entity_info.json" />
-      <change beforePath="$PROJECT_DIR$/fields/field_collection_item.json" afterPath="$PROJECT_DIR$/fields/field_collection_item.json" />
-      <change beforePath="$PROJECT_DIR$/fields/field_info_bundles.json" afterPath="$PROJECT_DIR$/fields/field_info_bundles.json" />
-      <change beforePath="$PROJECT_DIR$/fields/field_info_fields.json" afterPath="$PROJECT_DIR$/fields/field_info_fields.json" />
-      <change beforePath="$PROJECT_DIR$/fields/file.json" afterPath="$PROJECT_DIR$/fields/file.json" />
-      <change beforePath="$PROJECT_DIR$/fields/i18n_translation.json" afterPath="$PROJECT_DIR$/fields/i18n_translation.json" />
-      <change beforePath="$PROJECT_DIR$/fields/node-webformCORR_loaded.json" afterPath="$PROJECT_DIR$/fields/node-webformCORR_loaded.json" />
-      <change beforePath="$PROJECT_DIR$/fields/node-webform_loaded.json" afterPath="$PROJECT_DIR$/fields/node-webform_loaded.json" />
-      <change beforePath="$PROJECT_DIR$/fields/node.json" afterPath="$PROJECT_DIR$/fields/node.json" />
-      <change beforePath="$PROJECT_DIR$/fields/payment.json" afterPath="$PROJECT_DIR$/fields/payment.json" />
-      <change beforePath="$PROJECT_DIR$/fields/payment_method.json" afterPath="$PROJECT_DIR$/fields/payment_method.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redhenContacts.json" afterPath="$PROJECT_DIR$/fields/redhenContacts.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redhen_contact.json" afterPath="$PROJECT_DIR$/fields/redhen_contact.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redhen_contactNEW.json" afterPath="$PROJECT_DIR$/fields/redhen_contactNEW.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redhen_contact_type.json" afterPath="$PROJECT_DIR$/fields/redhen_contact_type.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redhen_contacts_loaded.json" afterPath="$PROJECT_DIR$/fields/redhen_contacts_loaded.json" />
-      <change beforePath="$PROJECT_DIR$/fields/redirect.json" afterPath="$PROJECT_DIR$/fields/redirect.json" />
-      <change beforePath="$PROJECT_DIR$/fields/summary.json" afterPath="$PROJECT_DIR$/fields/summary.json" />
-      <change beforePath="$PROJECT_DIR$/fields/taxonomy_term.json" afterPath="$PROJECT_DIR$/fields/taxonomy_term.json" />
-      <change beforePath="$PROJECT_DIR$/fields/taxonomy_vocabulary.json" afterPath="$PROJECT_DIR$/fields/taxonomy_vocabulary.json" />
-      <change beforePath="$PROJECT_DIR$/fields/user.json" afterPath="$PROJECT_DIR$/fields/user.json" />
-      <change beforePath="$PROJECT_DIR$/fields/wysiwyg_profile.json" afterPath="$PROJECT_DIR$/fields/wysiwyg_profile.json" />
-      <change beforePath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" afterPath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/design/.~lock.debug.odt#" afterPath="" />
       <change beforePath="$PROJECT_DIR$/playAround.script" afterPath="$PROJECT_DIR$/playAround.script" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" afterPath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php" afterPath="$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/Time.php" afterPath="$PROJECT_DIR$/src/ctrl/Time.php" />
       <change beforePath="$PROJECT_DIR$/src/ctrl/TransferSettings.php" afterPath="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
-      <change beforePath="$PROJECT_DIR$/src/export_model/FolderNaming.php" afterPath="$PROJECT_DIR$/src/export_model/FolderNaming.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImport.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
+      <change beforePath="$PROJECT_DIR$/src/export_model/Storage.php" afterPath="$PROJECT_DIR$/src/export_model/Storage.php" />
       <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/AccessTime.php" afterPath="$PROJECT_DIR$/src/import_model/AccessTime.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/ImportInterface.php" afterPath="$PROJECT_DIR$/src/import_model/ImportInterface.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/imports/Action.php" afterPath="$PROJECT_DIR$/src/import_model/imports/Action.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/imports/Activity.php" afterPath="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" afterPath="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,125 +20,69 @@
     <drupalPath>$PROJECT_DIR$/../../../..</drupalPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AbstractImportPDO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractImport.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deleteMe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/imports/deleteMe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playAround.script" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playAround.script">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phylogram_datatransfer.drush.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExportCSV.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Time.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImportInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/ImportInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="17" column="126" lean-forward="false" selection-start-line="17" selection-start-column="126" selection-end-line="17" selection-end-column="126" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccessTime.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-              <folding>
-                <marker date="1523357421989" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blacklist.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1523350779421" expanded="true" signature="348:529" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="AbstractImport.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="172">
+                  <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AbstractImportPDO.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="622">
+                  <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="TransferSettings.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="406" column="66" lean-forward="false" selection-start-line="406" selection-start-column="66" selection-end-line="406" selection-end-column="66" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AbstractImportPDO.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AbstractImportPDOMultipleStatements.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="194">
+                  <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getA</find>
-      <find>create</find>
-      <find>_addDataToRow</find>
-      <find>create_statement_method_stub</find>
-      <find>$this-&gt;row</find>
-      <find>_query</find>
-      <find>_createFields</find>
-      <find>fetchR</find>
-      <find>_getR</find>
-      <find>_modi</find>
       <find>_modify</find>
       <find>sort</find>
       <find>sortT</find>
@@ -205,9 +101,22 @@
       <find>timez</find>
       <find>DAteT</find>
       <find>new \Date</find>
-      <find>new DateT</find>
       <find>new Date</find>
+      <find>PHYLOGHRAM_DATATRANSFER_DEFAULT_START_EXPORT</find>
+      <find>new DateT</find>
+      <find>adress</find>
+      <find>\Drupal</find>
+      <find>Drupal</find>
+      <find>getLast</find>
+      <find>(?&lt;!\\)DateObject</find>
+      <find>DateObject</find>
+      <find>DateOb</find>
+      <find>createF</find>
+      <find>_createF</find>
     </findStrings>
+    <replaceStrings>
+      <replace>address</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../../../../campaignion_starterkit-7.x-1.17</dir>
       <dir>$PROJECT_DIR$/../../../../</dir>
@@ -223,22 +132,29 @@
         <option value="$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Action.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
-        <option value="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
-        <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/AbstractImportEntity.php" />
         <option value="$PROJECT_DIR$/src/ctrl/Time.php" />
         <option value="$PROJECT_DIR$/src/export_model/FolderNaming.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportEntity.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
         <option value="$PROJECT_DIR$/src/import_model/ImportInterface.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AccessTime.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" />
         <option value="$PROJECT_DIR$/playAround.script" />
+        <option value="$PROJECT_DIR$/phylogram_datatransfer.config" />
+        <option value="$PROJECT_DIR$/src/import_model/Blacklist.php" />
+        <option value="$PROJECT_DIR$/phylogram_datatransfer.install" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AccessTime.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" />
+        <option value="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
+        <option value="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
         <option value="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
+        <option value="$PROJECT_DIR$/phylogram_datatransfer.info" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/export_model/Storage.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
+        <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
       </list>
     </option>
   </component>
@@ -258,10 +174,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="x" value="715" />
+    <option name="y" value="24" />
+    <option name="width" value="651" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -279,6 +195,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,25 +257,12 @@
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="phylogram_datatransfer" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="import_model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="phylogram_datatransfer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campaignion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phylogram_datatransfer" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="import_model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="imports" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="export_model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,27 +302,27 @@
       <option name="presentableId" value="Default" />
       <updated>1523103694693</updated>
       <workItem from="1523103705205" duration="34907000" />
-      <workItem from="1523352301825" duration="9088000" />
+      <workItem from="1523352301825" duration="23428000" />
+      <workItem from="1523434507121" duration="2888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43995000" />
+    <option name="totallyTimeSpent" value="61223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1303" height="780" extended-state="6" />
+    <frame x="715" y="24" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28285933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -425,6 +330,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -435,7 +341,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php</url>
+          <line>55</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -443,7 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -451,12 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="55" />
-          <folding>
-            <marker date="1523350779421" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
-            <marker date="1523350779421" expanded="true" signature="893:960" ph="SELECT node.... node" />
-            <marker date="1523350779421" expanded="true" signature="1240:1725" ph="SELECT ${$fi... payment_status_item" />
-            <marker date="1523350779421" expanded="true" signature="2072:2152" ph="SELECT submi... webform_submissions" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -464,37 +371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="60" />
-          <folding>
-            <marker date="1523350779421" expanded="true" signature="302:382" ph="SELECT submi... webform_submissions" />
-            <marker date="1523350779421" expanded="true" signature="521:988" ph="SELECT ${$fi... webform_submissions" />
-            <marker date="1523350779421" expanded="true" signature="801:977" ph="SELECT node.... node" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="383" column="25" lean-forward="false" selection-start-line="383" selection-start-column="25" selection-end-line="383" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/RedhenContact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1523354749091" expanded="true" signature="333:403" ph="SELECT creat... redhen_contact" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -510,15 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="29" column="83" lean-forward="false" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/export_model/Storage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1026">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -526,22 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -554,63 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding>
-            <marker date="1523357421989" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../campaignion_starterkit-7.x-1.17/update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="391" column="14" lean-forward="false" selection-start-line="391" selection-start-column="14" selection-end-line="391" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1523350779421" expanded="true" signature="348:529" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/deleteMe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playAround.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,6 +416,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/salt.php" />
+    <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <marker date="1523369980711" expanded="true" signature="432:616" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/BlacklistEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/export_model/Storage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="126">
+            <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding>
+            <element signature="e#7#106#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/deleteMe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="57" column="40" lean-forward="false" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playAround.script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/RedhenContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <marker date="1523354749091" expanded="true" signature="333:403" ph="SELECT creat... redhen_contact" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="67" column="33" lean-forward="false" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="406" column="66" lean-forward="false" selection-start-line="406" selection-start-column="66" selection-end-line="406" selection-end-column="66" />
           <folding />
         </state>
       </provider>
