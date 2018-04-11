@@ -39,7 +39,7 @@ MAIN_STM;
 		'campaignion_activity_webform',
 	];
 
-    protected function _create_stm_1($fields) {
+    protected function _create_stm_1(string $fields) {
         $this->stm_1 = <<<STM2
 SELECT $fields
   FROM payment_status_item
