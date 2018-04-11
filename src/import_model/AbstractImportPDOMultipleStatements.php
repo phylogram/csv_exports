@@ -157,6 +157,9 @@ REGEX;
         $properties = get_object_vars($this);
         $table_properties = [];
         foreach ($properties as $property => $value) {
+            if (substr($property, strlen('_stub')*-1) === '_stub') {
+                continue;
+            }
             if (substr($property, 0, strlen($this->statement_tables_array_stub)) === $this->statement_tables_array_stub) {
                 $table_properties[$property] = $value;
             }
