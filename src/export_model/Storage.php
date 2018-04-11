@@ -27,12 +27,18 @@ class Storage {
 
 	protected $file;
 
-	public function __construct( $data_path, $levels, $file_extension = 'csv' ) {
+    /**
+     * Storage constructor.
+     * @param string $data_path This is where data is stored
+     * @param array $data_folders This is how data should be stored, eg [data/]year/month/
+     * @param string $file_extension
+     */
+	public function __construct( string $data_path, array $data_folders, string $file_extension = 'csv' ) {
 
 		$this->data_path      = substr( $data_path, - 1 ) === DIRECTORY_SEPARATOR ? $data_path : $data_path . DIRECTORY_SEPARATOR;
-		$this->path_array     = $levels;
-		$this->file_name      = array_pop( $levels );
-		$this->folder_array   = $levels;
+		$this->path_array     = $data_folders;
+		$this->file_name      = array_pop( $data_folders );
+		$this->folder_array   = $data_folders;
 		$this->file_extension = $file_extension;
 		$this->folder_path    = $this->data_path . implode( DIRECTORY_SEPARATOR, $this->folder_array ) . DIRECTORY_SEPARATOR;
 
