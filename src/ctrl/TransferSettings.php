@@ -401,11 +401,11 @@ class TransferSettings
 
         $settings = $this->settings;
         $properties = $this->getDefaultProperties();
-        foreach ($settings as $key => $topic) {
+        foreach ($settings as $name => $distinct_settings) {
             foreach ($properties as $property => $value) {
                 $key = substr($property, strlen('default_'));
-                if (!array_key_exists($key, $topic)) {
-                    $topic[$key] = $value;
+                if (!array_key_exists($key, $distinct_settings)) {
+                    $this->settings[$name][$key] = $value;
                 }
             }
         }
