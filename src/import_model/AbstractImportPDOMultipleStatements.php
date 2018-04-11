@@ -156,9 +156,9 @@ REGEX;
     protected function _getQueryTables() {
         $properties = get_object_vars($this);
         $table_properties = [];
-        foreach ($properties as $property) {
+        foreach ($properties as $property => $value) {
             if (substr($property, 0, strlen($this->statement_tables_array_stub)) === $this->statement_tables_array_stub) {
-                $table_properties[$property] = $this->$property;
+                $table_properties[$property] = $value;
             }
         }
         return $table_properties;
