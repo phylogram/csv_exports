@@ -154,7 +154,7 @@ REGEX;
      * @return array
      */
     protected function _getQueryTables() {
-        $properties = get_obj_vars($this);
+        $properties = get_object_vars($this);
         $table_properties = [];
         foreach ($properties as $property) {
             if (substr($property, 0, strlen($this->statement_tables_array_stub)) === $this->statement_tables_array_stub) {
