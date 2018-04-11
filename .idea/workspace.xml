@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="AbstractImport.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="86" column="23" lean-forward="false" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+            <state relative-caret-position="136">
+              <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -30,8 +31,23 @@
         <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="156" column="33" lean-forward="false" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+              <caret line="135" column="49" lean-forward="false" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Donation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+              <folding>
+                <marker date="1523441967543" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
+                <marker date="1523441967543" expanded="true" signature="893:960" ph="SELECT node.... node" />
+                <marker date="1523441967543" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
+                <marker date="1523441967543" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,7 +55,7 @@
       <file leaf-file-name="AbstractImportPDO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
+            <state relative-caret-position="744">
               <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
               <folding />
             </state>
@@ -50,8 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sortT</find>
-      <find>getQueryTables</find>
       <find>getQ</find>
       <find>_getQuer</find>
       <find>getQuer</find>
@@ -79,7 +93,9 @@
       <find>_createF</find>
       <find>$this-&gt;_findT</find>
       <find>ion _fin</find>
+      <find>var_</find>
       <find>createF</find>
+      <find>echo</find>
     </findStrings>
     <replaceStrings>
       <replace>address</replace>
@@ -100,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/import_model/imports/Action.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/AbstractImportEntity.php" />
         <option value="$PROJECT_DIR$/src/ctrl/Time.php" />
         <option value="$PROJECT_DIR$/src/export_model/FolderNaming.php" />
@@ -121,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/export_model/Storage.php" />
         <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
       </list>
     </option>
@@ -236,6 +252,17 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="import_model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="phylogram_datatransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campaignion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="phylogram_datatransfer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="import_model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="imports" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -280,18 +307,18 @@
       <updated>1523103694693</updated>
       <workItem from="1523103705205" duration="34907000" />
       <workItem from="1523352301825" duration="23428000" />
-      <workItem from="1523434507121" duration="4780000" />
+      <workItem from="1523434507121" duration="6604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63115000" />
+    <option name="totallyTimeSpent" value="64939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -328,13 +355,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -342,6 +363,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <marker date="1523350779421" expanded="true" signature="302:382" ph="SELECT submi... webform_submissions" />
+            <marker date="1523350779421" expanded="true" signature="521:988" ph="SELECT ${$fi... webform_submissions" />
+            <marker date="1523350779421" expanded="true" signature="801:977" ph="SELECT node.... node" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -515,9 +541,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <marker date="1523441967543" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
+            <marker date="1523441967543" expanded="true" signature="893:960" ph="SELECT node.... node" />
+            <marker date="1523441967543" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
+            <marker date="1523441967543" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
+        <state relative-caret-position="744">
           <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
           <folding />
         </state>
@@ -525,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="86" column="23" lean-forward="false" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        <state relative-caret-position="136">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -534,7 +573,7 @@
     <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="156" column="33" lean-forward="false" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+          <caret line="135" column="49" lean-forward="false" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
           <folding />
         </state>
       </provider>
