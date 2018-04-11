@@ -17,6 +17,8 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
     protected $statement_tables_array_stub = 'statement_tables_array_'; // 0, 1, 2, ...
     protected $statement_fields_array_stub = 'statement_fields_array_'; // 0, 1, 2, ...
 
+    public $input_fields;
+
 	/**
 	 * Overrides parent method
 	 *
@@ -77,7 +79,8 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
 	 *
 	 */
 	protected function _createFields( array $fields ) {
-        $this->_findTablesAndFields($fields);
+	    parent::_createFields($fields);
+        $this->_findTablesAndFields();
         $this->_addSortedFieldsProperty();
         $this->_sortTablesToQueries();
 	}
@@ -102,23 +105,18 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
      * 'table_name' => $table,
      * 'field_name' => $field,
      * 'full_field_name' => $table . '.' . $field,
-     *
-     * @param $fields
      */
-	protected function _findTablesAndFields ($fields) {
+	protected function _findTablesAndFields () {
+	    $export_names = $this->getExportNames();
+	    $import_names = $this->getImportNames();
         $extracted_keys = [];
         $regex = <<<'REGEX'
 	/(?<table>[0-9, a-z, A-Z$_]+)\`{0,1}\.\`{0,1}(?<![\'\"])(?<field>[0-9a-zA-Z$_]+)/
 REGEX;
-
-        foreach ($fields as $export_name => $import_name) {
+        foreach ($export_names as $export_name) {
+            $import_name = current($import_names);
+            next($import_names);
             $result = [];
-            // If extraction of table && import name is not successful everything
-            // else will not make sense.
-            if (!preg_match($regex, $import_name, $result)) {
-                continue;
-            }
-
             $table = $result['table'];
             $field = $result['field'];
 
@@ -130,6 +128,7 @@ REGEX;
                 'full_field_name' => $table . '.' . $field,
             ];
         }
+        $this->input_fields = $this->fields; // For later use?
         $this->fields =  $extracted_keys;
     }
 
