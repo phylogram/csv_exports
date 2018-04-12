@@ -93,5 +93,87 @@ class Storage {
 
 	}
 
+    /**
+     * @return string
+     */
+    public function getDataPath(): string
+    {
+        return $this->data_path;
+    }
+
+    /**
+     * @param string $data_path
+     */
+    public function setDataPath(string $data_path)
+    {
+        $this->data_path = $data_path;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getFileName()
+    {
+        return $this->file_name;
+    }
+
+    /**
+     * @param mixed|string $file_name
+     */
+    public function setFileName($file_name)
+    {
+        $this->file_name = $file_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileExtension(): string
+    {
+        return $this->file_extension;
+    }
+
+    /**
+     * @param string $file_extension
+     */
+    public function setFileExtension(string $file_extension)
+    {
+        $this->file_extension = $file_extension;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFolderPath(): string
+    {
+        return $this->folder_path;
+    }
+
+    /**
+     * @param string $folder_path
+     */
+    public function setFolderPath(string $folder_path)
+    {
+        $this->folder_path = $folder_path;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFullFileName(): string
+    {
+        return $this->full_file_name;
+    }
+
+    /**
+     * @param string $full_file_name
+     */
+    public function setFullFileName(string $full_file_name)
+    {
+        $this->full_file_name = $full_file_name;
+    }
+
+	
+
 
 }
