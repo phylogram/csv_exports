@@ -53,13 +53,13 @@ abstract class AbstractImportPDO extends AbstractImport {
 	 * SELECT $fields FROM ...
 	 */
 	protected function _prepare() {
-		$fields = $this->getImportNames();
-		$fields = implode( ', ', $fields );
 		$this->_createStatements( $fields );
 	}
 
 	protected function _createStatements() {
-		$this->_create_stm_0();
+        $fields = $this->getImportNames();
+        $fields = implode( ', ', $fields );
+		$this->_create_stm_0($fields);
 	}
 }
 

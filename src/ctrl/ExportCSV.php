@@ -80,13 +80,16 @@ class ExportCSV {
 
 				$write_headers = ! $folders->fileExists() || $this->mode === 'w'; # To Do: if file exists with no headers (eg due to an error), no headers, will be written
 				$folders->openFile( $this->mode );
-				if ( $write_headers ) {
-					$header = array_keys( $setting['fields'] );
+
+                $database_topic_query = new $class( $time_frame['start'], $time_frame['stop'], $setting['fields'] );
+
+
+                if ( $write_headers ) {
+					$header = $database_topic_query->getExportNames();;
 					# Do Stuff with it
 					$folders->writeFile( $header, PHYLOGRAM_DATATRANSFER_CSV_DELIMITER, PHYLOGRAM_DATATRANSFER_CSV_ENCLOSURE, PHYLOGRAM_DATATRANSFER_CSV_ESCAPE_CHAR );
 				}
 
-                $database_topic_query = new $class( $time_frame['start'], $time_frame['stop'], $setting['fields'] );
 				$database_topic_query->execute();
 
 				foreach ( $database_topic_query->fetchRow() as $row ) {

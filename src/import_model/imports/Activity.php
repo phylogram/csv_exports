@@ -14,7 +14,7 @@ class Activity extends \Drupal\phylogram_datatransfer\import_model\AbstractImpor
 	public static $oldest_entry_stm = <<<STM2
   SELECT created 
     FROM campaignion_activity
-ORDER BY submitted ASC
+ORDER BY created ASC
    LIMIT 1;
 STM2;
 

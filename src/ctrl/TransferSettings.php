@@ -281,10 +281,6 @@ class TransferSettings
                     'export_name' => 'Campaign',
                     'import_name' => 'webform_tracking.campaign',
                 ],
-                [
-                    'export_name' => 'Payment status',
-                    'import_name' => 'payment_status_item.status',
-                ],
             ],
         ],
         'Redhen Contacts' => [
