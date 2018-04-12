@@ -65,6 +65,8 @@ abstract class AbstractImport implements ImportInterface {
 	public static function getOldestEntryTime() {
 		$query = db_query( static::$oldest_entry_stm );
 		$unix_tmstp = $query->fetchField();
+		// If is no oldestEntryTime, got back to
+		$unix_tmstp = $unix_tmstp ?: '2018-03-01'; // To Do: change to 'now', because there is hence no data
 		$date_object = new \DateObject($unix_tmstp);
 		return $date_object;
 	}
