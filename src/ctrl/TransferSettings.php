@@ -45,7 +45,7 @@ class TransferSettings
      *
      * @var string
      */
-    protected $default_folder_structure = '/Y/m/';
+    protected $default_folder_structure = '/Y/m/d';
 
     /**
      * Defines the default file name
@@ -85,7 +85,7 @@ class TransferSettings
      *
      * @var string
      */
-    protected $default_frequency = 'month';
+    protected $default_frequency = 'forthnight';
 
 
     /**
