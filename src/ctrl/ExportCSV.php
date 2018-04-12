@@ -67,13 +67,11 @@ class ExportCSV {
 
 			if ( !$this->start) {
 				$last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast( $class );
-				$last_access = ! $last_access ? $class::getOldestEntryTime() : $last_access;
-				$this->start = $last_access;
+				$last_access = ! $last_access->getTimeStamp() ? $class::getOldestEntryTime() : $last_access;
+                $start = $last_access;
 			} else {
 				$start = $this->start;
 			}
-
-
 			$time_frames = \Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames( $start, $this->stop, $setting['frequency'] );
 
 			foreach ( $time_frames as $time_frame ) {
@@ -108,7 +106,6 @@ class ExportCSV {
 
 				}
 				$folders->closeFile();
-
 				# store if success
 				\Drupal\phylogram_datatransfer\import_model\AccessTime::setLast( $class, $time_frame['stop'] );
 			}
