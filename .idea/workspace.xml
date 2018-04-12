@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data/2018/04/Donations.csv" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" afterPath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
       <change beforePath="$PROJECT_DIR$/src/ctrl/Time.php" afterPath="$PROJECT_DIR$/src/ctrl/Time.php" />
+      <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImport.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
+      <change beforePath="$PROJECT_DIR$/src/import_model/imports/Action.php" afterPath="$PROJECT_DIR$/src/import_model/imports/Action.php" />
+      <change beforePath="$PROJECT_DIR$/src/import_model/imports/Activity.php" afterPath="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
+      <change beforePath="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" afterPath="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" />
+      <change beforePath="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,13 +24,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TransferSettings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="172" column="24" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="84" />
+              <folding>
+                <element signature="e#2694#5599#1#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AccessTime.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="540">
+              <caret line="35" column="64" lean-forward="false" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
               <folding>
-                <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
+                <marker date="1523528100947" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
               </folding>
             </state>
           </provider>
@@ -33,8 +51,8 @@
       <file leaf-file-name="ExportCSV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+            <state relative-caret-position="316">
+              <caret line="107" column="111" lean-forward="false" selection-start-line="107" selection-start-column="111" selection-end-line="107" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -43,9 +61,73 @@
       <file leaf-file-name="Time.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="429">
+              <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedhenContact.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/imports/RedhenContact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding>
+                <marker date="1523532318800" expanded="true" signature="363:433" ph="SELECT creat... redhen_contact" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractImport.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="50" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/imports/Action.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="35" />
+              <folding>
+                <marker date="1523527245507" expanded="true" signature="301:381" ph="SELECT submi... webform_submissions" />
+                <marker date="1523527245507" expanded="true" signature="520:987" ph="SELECT ${$fi... webform_submissions" />
+                <marker date="1523527245507" expanded="true" signature="800:976" ph="SELECT node.... node" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/imports/Activity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <marker date="1523532309996" expanded="true" signature="304:383" ph="SELECT creat... campaignion_activity" />
+                <marker date="1523532309996" expanded="true" signature="475:609" ph="SELECT ${$fi... campaignion_activity" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Donation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <marker date="1523527268364" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
+                <marker date="1523527268364" expanded="true" signature="893:960" ph="SELECT node.... node" />
+                <marker date="1523527268364" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
+                <marker date="1523527268364" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,11 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_prepa</find>
-      <find>_prepare</find>
-      <find>query</find>
-      <find>_getAdditionalData()</find>
-      <find>\s*\'[a-zA-Z_]+\'\s*=&gt;\s*\'default\',\n</find>
       <find>\d\d{0,1}\s*=&gt;\s*(?=\[)</find>
       <find>sm</find>
       <find>timezone</find>
@@ -84,6 +161,11 @@
       <find>create</find>
       <find>createF</find>
       <find>echo</find>
+      <find>n query</find>
+      <find>class</find>
+      <find>var_dum</find>
+      <find>'\Drupal\phylogram_datatransfer\import_model\imports\</find>
+      <find>$oldest_entry_stm</find>
     </findStrings>
     <replaceStrings>
       <replace>address</replace>
@@ -101,8 +183,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/Action.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/AbstractImportEntity.php" />
         <option value="$PROJECT_DIR$/src/export_model/FolderNaming.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportEntity.php" />
@@ -111,20 +191,22 @@
         <option value="$PROJECT_DIR$/phylogram_datatransfer.config" />
         <option value="$PROJECT_DIR$/src/import_model/Blacklist.php" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.install" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AccessTime.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" />
         <option value="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.info" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/export_model/Storage.php" />
-        <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
-        <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/Action.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AccessTime.php" />
         <option value="$PROJECT_DIR$/src/ctrl/Time.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
+        <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
+        <option value="$PROJECT_DIR$/src/import_model/imports/RedhenContact.php" />
         <option value="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
       </list>
     </option>
@@ -295,12 +377,12 @@
       <updated>1523103694693</updated>
       <workItem from="1523103705205" duration="34907000" />
       <workItem from="1523352301825" duration="23428000" />
-      <workItem from="1523434507121" duration="13303000" />
+      <workItem from="1523434507121" duration="19295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71638000" />
+    <option name="totallyTimeSpent" value="77630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -311,7 +393,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -325,6 +407,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -339,26 +441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Activity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="60" />
-          <folding>
-            <marker date="1523350779421" expanded="true" signature="302:382" ph="SELECT submi... webform_submissions" />
-            <marker date="1523350779421" expanded="true" signature="521:988" ph="SELECT ${$fi... webform_submissions" />
-            <marker date="1523350779421" expanded="true" signature="801:977" ph="SELECT node.... node" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -485,51 +567,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/RedhenContact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <marker date="1523354749091" expanded="true" signature="333:403" ph="SELECT creat... redhen_contact" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="405" column="23" lean-forward="false" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding>
-            <marker date="1523441967543" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
-            <marker date="1523441967543" expanded="true" signature="893:960" ph="SELECT node.... node" />
-            <marker date="1523441967543" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
-            <marker date="1523441967543" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
           </folding>
         </state>
       </provider>
@@ -542,28 +585,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="540">
+          <caret line="35" column="64" lean-forward="false" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
           <folding>
-            <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
+            <marker date="1523528100947" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="162">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="50" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="172" column="24" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="84" />
+          <folding>
+            <element signature="e#2694#5599#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <marker date="1523527245507" expanded="true" signature="301:381" ph="SELECT submi... webform_submissions" />
+            <marker date="1523527245507" expanded="true" signature="520:987" ph="SELECT ${$fi... webform_submissions" />
+            <marker date="1523527245507" expanded="true" signature="800:976" ph="SELECT node.... node" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <marker date="1523527268364" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
+            <marker date="1523527268364" expanded="true" signature="893:960" ph="SELECT node.... node" />
+            <marker date="1523527268364" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
+            <marker date="1523527268364" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/Activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <marker date="1523532309996" expanded="true" signature="304:383" ph="SELECT creat... campaignion_activity" />
+            <marker date="1523532309996" expanded="true" signature="475:609" ph="SELECT ${$fi... campaignion_activity" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/imports/RedhenContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <marker date="1523532318800" expanded="true" signature="363:433" ph="SELECT creat... redhen_contact" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+        <state relative-caret-position="316">
+          <caret line="107" column="111" lean-forward="false" selection-start-line="107" selection-start-column="111" selection-end-line="107" selection-end-column="111" />
           <folding />
         </state>
       </provider>

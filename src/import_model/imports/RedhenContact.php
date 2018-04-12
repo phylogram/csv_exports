@@ -6,7 +6,7 @@
  * Time: 15:28
  */
 
-namespace import_model\imports;
+namespace Drupal\phylogram_datatransfer\import_model\imports;
 
 
 class RedhenContact extends \Drupal\phylogram_datatransfer\import_model\AbstractImportEntity {

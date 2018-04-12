@@ -10,7 +10,6 @@ namespace Drupal\phylogram_datatransfer\import_model\imports;
 
 class Action extends \Drupal\phylogram_datatransfer\import_model\AbstractImportPDO {
 
-
 	public static $oldest_entry_stm = <<<STM2
   SELECT submitted 
     FROM webform_submissions

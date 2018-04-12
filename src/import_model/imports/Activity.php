@@ -6,7 +6,7 @@
  * Time: 10:13
  */
 
-namespace import_model\imports;
+namespace Drupal\phylogram_datatransfer\import_model\imports;
 
 
 class Activity extends \Drupal\phylogram_datatransfer\import_model\AbstractImportPDO {

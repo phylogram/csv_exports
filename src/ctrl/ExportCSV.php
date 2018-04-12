@@ -61,8 +61,6 @@ class ExportCSV {
 		foreach ( $settings as $setting ) {
 
 			$class = $setting['class'];
-
-
 			# if start = last, database query, if query 0 ask $class
 
 			if ( !$this->start) {
