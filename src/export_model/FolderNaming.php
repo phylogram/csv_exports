@@ -9,7 +9,13 @@
 
 namespace Drupal\phylogram_datatransfer\export_model;
 
-
+/**
+ * Class FolderNaming
+ *
+ * Translates paths with date() to array of parsed folder_names
+ *
+ * @package Drupal\phylogram_datatransfer\export_model
+ */
 class FolderNaming {
 
 	/**

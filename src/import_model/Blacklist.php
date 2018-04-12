@@ -9,9 +9,18 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
+/**
+ * Class Blacklist
+ *
+ * Stores a hashed email black list
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 class Blacklist {
 
 	/**
+     * Checks if a email address is in blacklist
+     *
 	 * @param string $email_address
 	 * @return  bool
 	 */
@@ -31,6 +40,11 @@ STM;
 		return $result == TRUE;
 	}
 
+    /**
+     * Add new email address to blacklist.
+     *
+     * @param $email_address
+     */
 	public static function insert($email_address) {
         $email_address = password_hash($email_address);
 	    $insert = db_insert('phylogram_datatransfer_blacklist');
@@ -40,6 +54,11 @@ STM;
 	    $insert->execute();
     }
 
+    /**
+     * Remove email address from black list.
+     *
+     * @param $email_address
+     */
     public static function remove($email_address) {
         $email_address = password_hash($email_address);
         $delete = db_delete('phylogram_datatransfer_blacklist');

@@ -8,15 +8,43 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
-
+/**
+ * Class AbstractImportPDOMultipleStatements
+ *
+ * When one query is simple not enough ...
+ *
+ * Calls as much queries as needed for each row of the main query.
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
 
     use   \Drupal\phylogram_datatransfer\ctrl\SortFieldsTrait;
 
+    /**
+     * $query_and_query_and_fetch_additional_data_ 0, 1, ... must be implemented in concrete child classes
+     *
+     * @var string $query_and_fetch_additional_data_stub will be beginning of each method that queries and fetches a statement, numbered
+     */
 	protected $query_and_fetch_additional_data_stub = 'query_and_fetch_'; // 1, 2, 3
+
+    /**
+     * $statement_tables_array_ 0, 1, ... must be implemented in concrete child classes
+     *
+     * @var string $statement_tables_array_stub will be beginning of each property that defines all tables in a query, numbered
+     */
     protected $statement_tables_array_stub = 'statement_tables_array_'; // 0, 1, 2, ...
+
+    /**
+     * $statement_fields_array_ 0, 1, ... will be generated automatically!
+     *
+     * @var string $statement_fields_array_stub will be beginning of each property that defines the fields of a statement, numbered
+     */
     protected $statement_fields_array_stub = 'statement_fields_array_'; // 0, 1, 2, ...
 
+    /**
+     * @var $input_fields Remembers the $field argument in _construct()
+     */
     public $input_fields;
 
 	/**
@@ -44,6 +72,11 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
 		}
 	}
 
+    /**
+     * Calls the additional queries and sorts the fields.
+     *
+     * @return bool|void
+     */
 	protected function _modifyRow() {
 		$this->_getAdditionalData();
 		$this->row = $this->sortFields($this->row, $this->sort_fields);
@@ -138,6 +171,9 @@ REGEX;
         $this->fields =  $extracted_keys;
     }
 
+    /**
+     * Goes through each field, to which table the field belongs, to which query the table belongs and stores that information.
+     */
     protected function _sortTablesToQueries() {
         $table_arrays = $this->_getQueryTables();
         foreach ($this->fields as $field) {

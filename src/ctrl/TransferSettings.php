@@ -187,10 +187,7 @@ class TransferSettings
         ],
         'Activities' => [
             'class' => '\Drupal\phylogram_datatransfer\import_model\imports\Activity',
-            'file_name' => 'd.m.Y (D)',
-            'folder_structure' => '\A\C\T\I\V\I\T\Y/Y/d',
-            'parse_file_name' => TRUE,
-            'frequency' => 'week',
+            'file_name' => 'Donations',
             'fields' => [
                 // Please provide table_name.field_name as import_name
                 [
@@ -409,7 +406,11 @@ class TransferSettings
         ],
     ];
 
-
+    /**
+     * TransferSettings constructor.
+     *
+     * Replaces unset values with default properties
+     */
     public function __construct()
     {
         // replace default array values with default properties
@@ -426,6 +427,11 @@ class TransferSettings
         }
     }
 
+    /**
+     * Returns all default properties.
+     *
+     * @return array
+     */
     public function getDefaultProperties() {
         $properties = get_object_vars($this);
         $default_properties = [];
@@ -437,7 +443,11 @@ class TransferSettings
         return $default_properties;
     }
 
-
+    /**
+     * Iterate over the settings.
+     *
+     * @return \Generator
+     */
     public function iterateSettings()
     {
         foreach ($this->settings as $topic => $setting) {

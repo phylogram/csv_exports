@@ -8,6 +8,13 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
+/**
+ * Interface ImportInterface
+ *
+ * What all classes in import_model\imports\ should be able to do!
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 interface ImportInterface {
 
 	/**
@@ -40,4 +47,11 @@ interface ImportInterface {
 	 * @return string
 	 */
 	public static function getOldestEntryTime();
+
+    /**
+     * Get the headers for csv
+     * 
+     * @return mixed
+     */
+	public function getExportNames();
 }

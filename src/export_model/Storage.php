@@ -8,7 +8,13 @@
 
 namespace Drupal\phylogram_datatransfer\export_model;
 
-
+/**
+ * Class Storage
+ *
+ * Takes care of files, folders and else ...
+ *
+ * @package Drupal\phylogram_datatransfer\export_model
+ */
 class Storage {
 
 	protected $data_path = '.';

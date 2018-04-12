@@ -8,26 +8,53 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
-
+/**
+ * Class AbstractImport
+ *
+ * This is the most general class for imports. It provides a basic software flow and calls code, that the child classes implement.
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 abstract class AbstractImport implements ImportInterface {
 
+    /**
+     * @var string A SQL-Statement that returns the time of the oldest entry, of the chosen topic
+     */
 	public static $oldest_entry_stm;
 
+    /**
+     * @var \DateObject
+     */
 	public $start;
+
+    /**
+     * @var \DateObject
+     */
 	public $stop;
 
+    /**
+     * Sets the headers of the output, gets the data
+     * @var array array from ctrl\TransferSettings like [['export_name' => 'Field', 'import_name' => 'max(table.field)'], ...]
+     */
 	public $fields;
+
+    /**
+     * See $this->query()
+     */
 	public $query;
 
+    /**
+     * @var array current row
+     */
 	public $row;
 
 	/**
-	 * Sets $this->query.
+	 * Sets $this->query().
 	 */
 	abstract protected function _query();
 
 	/**
-	 * Sets $this->row.
+	 * Sets $this->row().
 	 */
 	abstract protected function _getRow();
 
@@ -38,8 +65,11 @@ abstract class AbstractImport implements ImportInterface {
 
     /**
      * AbstractImport constructor.
-     * @param string $start
-     * @param string $stop
+     *
+     * Sets a time range, creates fields, prepares (statements), and queries.
+     *
+     * @param \DateObject $start
+     * @param \DateObject $stop
      * @param array $fields Is supposed to be an array of arrays with keys: import_name and _export_name, like in ctrl\TransferSettings
      */
 	public function __construct( $start, $stop, array $fields ) {
@@ -60,6 +90,8 @@ abstract class AbstractImport implements ImportInterface {
 	}
 
 	/**
+     * Returns the oldes entry time of the chosen topic.
+     *
 	 * @return \DateObject oldest entry time
 	 */
 	public static function getOldestEntryTime() {
@@ -71,10 +103,16 @@ abstract class AbstractImport implements ImportInterface {
 		return $date_object;
 	}
 
+    /**
+     * @return array Names of the fields for export
+     */
 	public function getExportNames() {
 		return array_column( $this->fields, 'export_name' );
 	}
 
+    /**
+     * @return array the field names needed for import
+     */
 	public function getImportNames() {
 		return array_column( $this->fields, 'import_name' );
 	}
@@ -103,6 +141,13 @@ abstract class AbstractImport implements ImportInterface {
 		return TRUE;
 	}
 
+    /**
+     * Stub, to be overridden by child classes. Is called in fetchRow()
+     *
+     * Suitable for changing the row, eg sorting and adding new data
+     *
+     * @return bool
+     */
 	protected function _modifyRow() {
 		return TRUE;
 	}

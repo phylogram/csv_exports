@@ -8,20 +8,41 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
-
+/**
+ * Class AbstractImportEntity
+ *
+ * Parent class for executing simple EntityAPI queries
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\import_model\AbstractImport
 {
     use   \Drupal\phylogram_datatransfer\ctrl\SortFieldsTrait;
 
+    /**
+     * @var The result of the main query
+     */
     public $result;
-    public $sort_fields;
+
+    /**
+     * @var str $entity_type to query against
+     */
     public $entity_type;
+
+    /**
+     * @var int counts the loaded entities
+     */
     public $row_number = 0;
 
     public function execute() {
         $this->result = $this->query->execute();
     }
 
+    /**
+     * Overwrites parent with foreach instead of while and cleans drupal cache in loop
+     *
+     * @return array|\Generator
+     */
     public function fetchRow()
     {
         $rows = $this->_getRow();
@@ -33,11 +54,21 @@ abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\impor
         cache_clear_all();
     }
 
+    /**
+     * Calls sort fields each loop
+     *
+     * @return bool|void
+     */
     protected function _modifyRow()
     {
         $this->row = $this->sortFields($this->row, $this->sort_fields);
     }
 
+    /**
+     * Creates fields and makes them sortable
+     *
+     * @param array $fields
+     */
     protected function _createFields(array $fields)
     {
         parent::_createFields($fields);
@@ -52,6 +83,8 @@ abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\impor
 
     /**
      * Like db-fetchAssoc
+     *
+     * Returns data each loop with entity_load
      *
      * @yield array
      */

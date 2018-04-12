@@ -11,31 +11,15 @@ namespace Drupal\phylogram_datatransfer\ctrl;
 
 class Time {
 
-	public static $time_string_conversions = [
-		# Days
-		'd' => 'day',
-		'j' => 'day',
-		'l' => 'day',
-		'z' => 'day',
-		# Months
-		'm' => 'month',
-		'n' => 'month',
-		'f' => 'month', # F will be downsized to f
-		# Year
-		'y' => 'year',
-		# Time,
-		'g' => 'hour', # Hours
-		'h' => 'hour',
-		# Less will be ignored (for now)
-	];
-
-	public static $time_sizes = [
-		'hour'  => 1,
-		'day'   => 2,
-		'month' => 3,
-		'year'  => 4,
-	];
-
+    /**
+     * Iterates through time in calender style: Year and month will not be in 365 or 30 days, it will be the first day
+     * of the next year/month. All other units will behave as absolute values.
+     *
+     * @param  \DateObject $start
+     * @param  \DateObject $stop
+     * @param string $frequency Valid units can be found @link http://php.net/manual/de/datetime.formats.relative.php here. @endlink
+     * @return \Generator
+     */
 	public static function iterateCalenderTimeFrames( $start, $stop, string $frequency ) {
 		$start_frame = clone($start);
 		$end_frame   = clone( $start_frame );
@@ -58,6 +42,12 @@ class Time {
 		}
 	}
 
+    /**
+     * Create the modification string
+     *
+     * @param $frequency
+     * @return string
+     */
 	protected static function _getModificationString($frequency) {
         // Taking Care of calender style iterating
         if (

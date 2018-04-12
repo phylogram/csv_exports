@@ -12,7 +12,11 @@ namespace Drupal\phylogram_datatransfer\ctrl;
 trait SortFieldsTrait
 {
 
+    /**
+     * @var array For sorting fields with multiple aliases [['Draft' => ['is_draft', 'submitted.is_draft', 'if(submitted.is_draft, 'y', 'n'], ...]
+     */
     public $sort_fields = array();
+    
     /**
      * Sort $fields by $keys
      *

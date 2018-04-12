@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * @class ExportCSV The export-csv command
+ *
  * Created by PhpStorm.
  * User: phylogram – Philip Röggla
  * Date: 27.03.18

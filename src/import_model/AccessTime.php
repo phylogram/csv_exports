@@ -9,9 +9,18 @@
 
 namespace Drupal\phylogram_datatransfer\import_model;
 
+/**
+ * Class AccessTime
+ *
+ * When is teh last time, we exported data for a topic? And store the time, when we were successful.
+ *
+ * @package Drupal\phylogram_datatransfer\import_model
+ */
 class AccessTime {
 
 	/**
+     * Retrieves last access time
+     *
 	 * @param string $topic
 	 *
 	 * @return  $string || NULL
@@ -32,7 +41,12 @@ STM;
 		return $result;
 	}
 
-
+    /**
+     * Stores access time
+     *
+     * @param string $topic
+     * @param $DateTime
+     */
 	public static function setLast( string $topic, $DateTime ) {
 	    $timestamp = $DateTime->getTimestamp();
 		$table = db_insert( 'phylogram_datatransfer_export_time' );
