@@ -38,6 +38,8 @@ abstract class AbstractImportPDOMultipleStatements extends AbstractImportPDO {
                 $fields = $this->$fields_property;
                 $fields = implode(', ', $fields);
 				$this->$method($fields);
+				$statement_property = $this->statement_property_stub . $n;
+				$statement = $this->$statement_property;
 			}
 		}
 	}
@@ -140,11 +142,12 @@ REGEX;
         $table_arrays = $this->_getQueryTables();
         foreach ($this->fields as $field) {
             $table_name = $field['table_name'];
+            $import_name = $field['import_name'];
             foreach ($table_arrays as $property => $table_array) {
                 if (array_search($table_name, $table_array) !== FALSE) {
                     $n = substr($property, strlen($this->statement_tables_array_stub));
                     $fields_array_property = $this->statement_fields_array_stub . $n;
-                    $this->$fields_array_property[] = $table_name;
+                    $this->$fields_array_property[] = $import_name;
                     break;
                 }
             }
