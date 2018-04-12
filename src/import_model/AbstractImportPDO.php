@@ -37,7 +37,7 @@ abstract class AbstractImportPDO extends AbstractImport {
 			'start' => $this->start,
 			'stop'  => $this->stop,
 		], [
-				'fetch' => PDO::FETCH_NAMED,
+				'fetch' => \PDO::FETCH_NAMED,
 			]
 		);
 	}
