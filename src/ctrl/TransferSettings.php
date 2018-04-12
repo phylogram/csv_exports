@@ -169,7 +169,7 @@ class TransferSettings
                 ],
             ],
         ],
-        'Activity' => [
+        'Activities' => [
             'class' => '\Drupal\phylogram_datatransfer\import_model\imports\Activity',
             'file_name' => 'Activities',
             'fields' => [
