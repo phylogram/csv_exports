@@ -37,8 +37,7 @@ class Time {
 	];
 
 	public static function iterateCalenderTimeFrames( $start, $stop, string $frequency ) {
-
-		$start_frame = new \DateObject( $start );
+		$start_frame = $start;;
 		$end_frame   = clone( $start_frame );
 		$end_frame->modify( "first day of next $frequency" ); # To Do: If less then day -> timezone not found in database error
 
