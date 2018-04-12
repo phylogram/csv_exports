@@ -16,6 +16,7 @@ abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\impor
     public $result;
     public $sort_fields;
     public $entity_type;
+    public $row_number = 0;
 
     public function execute() {
         $this->result = $this->query->execute();
@@ -23,7 +24,12 @@ abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\impor
 
     public function fetchRow()
     {
-        parent::fetchRow();
+        $rows = $this->_getRow();
+        foreach ( $rows as $this->row_number => $this->row ) {
+            $this->_modifyRow();
+            yield $this->row;
+        }
+
         cache_clear_all();
     }
 
@@ -43,12 +49,16 @@ abstract class AbstractImportEntity extends \Drupal\phylogram_datatransfer\impor
     }
 
 
+
     /**
      * Like db-fetchAssoc
      *
      * @yield array
      */
     protected function _getRow() {
+        if (!$this->result) {
+            return NULL;
+        }
         foreach ( array_keys( $this->result[$this->entity_type] ) as $id ) {
             $entity = entity_load( $this->entity_type, $id );
             if ( ! $entity ) {
