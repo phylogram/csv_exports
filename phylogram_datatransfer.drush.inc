@@ -77,7 +77,6 @@ function drush_phylogram_datatransfer_export_csv() {
   $start = drush_get_option('start', $default = PHYLOGHRAM_DATATRANSFER_DEFAULT_START_EXPORT);
   $stop = drush_get_option('stop', $default = PHYLOGRAM_DATATRANSFER__DEFAULT_END_EXPORT);
   $mode = drush_get_option('mode', $default = PHYLOGRAM_DATATRANSFER__DEFAULT_FILE_MODE);
-
   $exclude = drush_get_option('exclude');
   if ($exclude) {
     $exclude = str_replace('""', '', $exclude); # To Do: necessary?

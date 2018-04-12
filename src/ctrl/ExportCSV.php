@@ -44,7 +44,6 @@ class ExportCSV {
 		$this->start = $start ? new \DateObject($start): $start;
 		$this->stop  = new \DateObject($stop);
 		$this->mode  = $mode;
-
 		$this->settings = new TransferSettings();
 		$this->exclude = $exclude ? $exclude : [];
 	}
@@ -69,6 +68,7 @@ class ExportCSV {
                 $start = $last_access;
 			} else {
 				$start = $this->start;
+
 			}
 			$time_frames = \Drupal\phylogram_datatransfer\ctrl\Time::iterateCalenderTimeFrames( $start, $this->stop, $setting['frequency'] );
 
@@ -80,9 +80,7 @@ class ExportCSV {
 
 				$write_headers = ! $folders->fileExists() || $this->mode === 'w'; # To Do: if file exists with no headers (eg due to an error), no headers, will be written
 				$folders->openFile( $this->mode );
-
                 $database_topic_query = new $class( $time_frame['start'], $time_frame['stop'], $setting['fields'] );
-
 
                 if ( $write_headers ) {
 					$header = $database_topic_query->getExportNames();;
@@ -91,7 +89,6 @@ class ExportCSV {
 				}
 
 				$database_topic_query->execute();
-
 				foreach ( $database_topic_query->fetchRow() as $row ) {
 					# validate
 					foreach ( $row as $column ) {
