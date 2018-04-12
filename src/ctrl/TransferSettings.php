@@ -421,8 +421,8 @@ class TransferSettings
 
     public function iterateSettings()
     {
-        foreach ($this->settings as $setting) {
-            yield $setting;
+        foreach ($this->settings as $topic => $setting) {
+            yield $topic => $setting;
         }
     }
 
