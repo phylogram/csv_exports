@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" afterPath="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" afterPath="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/Time.php" afterPath="$PROJECT_DIR$/src/ctrl/Time.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,56 +18,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TransferSettings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+      <file leaf-file-name="AccessTime.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="405" column="23" lean-forward="false" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractImport.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractImportPDOMultipleStatements.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="159" column="52" lean-forward="false" selection-start-line="159" selection-start-column="52" selection-end-line="159" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Donation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="288">
+              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding>
-                <marker date="1523441967543" expanded="true" signature="613:961" ph="SELECT ${$fi... webform_submissions" />
-                <marker date="1523441967543" expanded="true" signature="893:960" ph="SELECT node.... node" />
-                <marker date="1523441967543" expanded="true" signature="1247:1732" ph="SELECT ${$fi... payment_status_item" />
-                <marker date="1523441967543" expanded="true" signature="2079:2159" ph="SELECT submi... webform_submissions" />
+                <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractImportPDO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
+      <file leaf-file-name="ExportCSV.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+            <state relative-caret-position="226">
+              <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Time.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -76,7 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getQuer</find>
       <find>_prepa</find>
       <find>_prepare</find>
       <find>query</find>
@@ -101,11 +78,12 @@
       <find>_createF</find>
       <find>$this-&gt;_findT</find>
       <find>ion _fin</find>
-      <find>var_</find>
-      <find>echo</find>
-      <find>createF</find>
       <find>var_d</find>
       <find>substr</find>
+      <find>var_</find>
+      <find>create</find>
+      <find>createF</find>
+      <find>echo</find>
     </findStrings>
     <replaceStrings>
       <replace>address</replace>
@@ -125,9 +103,7 @@
         <option value="$PROJECT_DIR$/src/ctrl/SortFieldsTrait.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Action.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Activity.php" />
-        <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/AbstractImportEntity.php" />
-        <option value="$PROJECT_DIR$/src/ctrl/Time.php" />
         <option value="$PROJECT_DIR$/src/export_model/FolderNaming.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportEntity.php" />
         <option value="$PROJECT_DIR$/src/import_model/ImportInterface.php" />
@@ -140,14 +116,16 @@
         <option value="$PROJECT_DIR$/src/import_model/imports/deleteMe.php" />
         <option value="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
-        <option value="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.info" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/export_model/Storage.php" />
         <option value="$PROJECT_DIR$/src/ctrl/TransferSettings.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImport.php" />
         <option value="$PROJECT_DIR$/src/import_model/imports/Donation.php" />
+        <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDO.php" />
         <option value="$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php" />
+        <option value="$PROJECT_DIR$/src/ctrl/Time.php" />
+        <option value="$PROJECT_DIR$/src/ctrl/ExportCSV.php" />
       </list>
     </option>
   </component>
@@ -317,12 +295,12 @@
       <updated>1523103694693</updated>
       <workItem from="1523103705205" duration="34907000" />
       <workItem from="1523352301825" duration="23428000" />
-      <workItem from="1523434507121" duration="8018000" />
+      <workItem from="1523434507121" duration="13303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66353000" />
+    <option name="totallyTimeSpent" value="71638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -420,14 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -450,14 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -515,16 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playAround.script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -543,6 +495,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="405" column="23" lean-forward="false" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/imports/Donation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -556,34 +534,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        <state relative-caret-position="612">
+          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ctrl/TransferSettings.php">
+    <entry file="file://$PROJECT_DIR$/src/import_model/AccessTime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="405" column="23" lean-forward="false" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
+        <state relative-caret-position="288">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <marker date="1523385526291" expanded="true" signature="377:627" ph="SELECT phylo... phylogram_datatransfer_export_time" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ctrl/Time.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDOMultipleStatements.php">
+    <entry file="file://$PROJECT_DIR$/src/ctrl/ExportCSV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="159" column="52" lean-forward="false" selection-start-line="159" selection-start-column="52" selection-end-line="159" selection-end-column="52" />
+        <state relative-caret-position="226">
+          <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
           <folding />
         </state>
       </provider>
