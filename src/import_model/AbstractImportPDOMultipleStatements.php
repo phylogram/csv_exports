@@ -117,6 +117,10 @@ REGEX;
             $import_name = current($import_names);
             next($import_names);
             $result = [];
+            preg_match($regex, $import_name, $result);
+            if (!$result) {
+                continue; // and cry
+            }
             $table = $result['table'];
             $field = $result['field'];
 
@@ -137,7 +141,7 @@ REGEX;
         foreach ($this->fields as $field) {
             $table_name = $field['table_name'];
             foreach ($table_arrays as $property => $table_array) {
-                if (array_search($table_name, $table_array)) {
+                if (array_search($table_name, $table_array) !== FALSE) {
                     $n = substr($property, strlen($this->statement_tables_array_stub));
                     $fields_array_property = $this->statement_fields_array_stub . $n;
                     $this->$fields_array_property[] = $table_name;
@@ -186,6 +190,4 @@ REGEX;
             $this->row[$new_key] = $value;
         }
     }
-
-
 }
