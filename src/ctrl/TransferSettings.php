@@ -87,9 +87,25 @@ class TransferSettings
      */
     protected $default_frequency = 'forthnight';
 
+    /**
+     * @var bool if the file name should be parsed with date()
+     */
+    protected $default_parse_file_name = FALSE;
+
 
     /**
      * ['name'] => settings
+     *
+     * This keywords will be read (for more information see the the default values above):
+     *
+     * - The key of the setting array (eg Donations) will be used to compare with exclude in terminal options
+     *   - class: The class to use, with namespace
+     *   - file_name
+     *   - folder_structure
+     *   - file_name
+     *   - file_extension
+     *   - frequency
+     *   - parse_file_name
      *
      * @var array
      */
@@ -171,7 +187,10 @@ class TransferSettings
         ],
         'Activities' => [
             'class' => '\Drupal\phylogram_datatransfer\import_model\imports\Activity',
-            'file_name' => 'Activities',
+            'file_name' => 'd.m.Y (D)',
+            'folder_structure' => '\A\C\T\I\V\I\T\Y/Y/d',
+            'parse_file_name' => TRUE,
+            'frequency' => 'week',
             'fields' => [
                 // Please provide table_name.field_name as import_name
                 [
