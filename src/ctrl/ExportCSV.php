@@ -57,10 +57,13 @@ class ExportCSV {
 		// Get settings
 		$settings = $this->settings->iterateSettings();
 
-		foreach ( $settings as $setting ) {
+		foreach ( $settings as $topic => $setting ) {
 
 			$class = $setting['class'];
-			# if start = last, database query, if query 0 ask $class
+			if (array_search($class, $this->exclude) !== FALSE
+                || array_search($topic, $this->exclude) !== FALSE) {
+			    continue;
+            }
 
 			if ( !$this->start) {
 				$last_access = \Drupal\phylogram_datatransfer\import_model\AccessTime::getLast( $class );
