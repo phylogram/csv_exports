@@ -39,15 +39,17 @@ class Time {
 	public static function iterateCalenderTimeFrames( $start, $stop, string $frequency ) {
 		$start_frame = clone($start);
 		$end_frame   = clone( $start_frame );
-		$end_frame->modify( "first day of next $frequency" ); # To Do: If less then day -> timezone not found in database error
+
+        $modification = static::_getModificationString($frequency);
+		$end_frame->modify($modification); # To Do: If less then day -> timezone not found in database error
 
 		$stop_date = $stop;
 
 
 		while ( $end_frame->getTimestamp() < $stop_date->getTimestamp() ) {
 			yield [ 'start' => $start_frame, 'stop' => $end_frame ];
-			$start_frame->modify( "first day of next $frequency" );
-			$end_frame->modify( "first day of next $frequency" );
+			$start_frame->modify( $modification );
+			$end_frame->modify( $modification );
 		}
 
 		# if there is a fraction of a month left
@@ -55,4 +57,18 @@ class Time {
 			yield [ 'start' => $start_frame, 'stop' => $stop_date ];
 		}
 	}
+
+	protected static function _getModificationString($frequency) {
+        // Taking Care of calender style iterating
+        if (
+            $frequency == 'month'
+            || $frequency == 'year'
+        ) {
+            $modification = 'first day of next';
+        } else {
+            $modification = '';
+        }
+        $modification .= "next $frequency";
+        return $modification;
+    }
 }
