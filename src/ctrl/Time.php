@@ -46,8 +46,8 @@ class Time {
 
 		while ( $end_frame->getTimestamp() < $stop_date->getTimestamp() ) {
 			yield [ 'start' => $start_frame, 'stop' => $end_frame ];
-			$start_frame->modify( "first minute of next $frequency" );
-			$end_frame->modify( "first minute of next $frequency" );
+			$start_frame->modify( "first day of next $frequency" );
+			$end_frame->modify( "first day of next $frequency" );
 		}
 
 		# if there is a fraction of a month left
