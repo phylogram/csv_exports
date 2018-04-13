@@ -50,7 +50,7 @@ interface ImportInterface {
 
     /**
      * Get the headers for csv
-     * 
+     *
      * @return mixed
      */
 	public function getExportNames();
