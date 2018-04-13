@@ -18,7 +18,7 @@ namespace Drupal\phylogram_datatransfer\import_model;
  */
 class Blacklist {
 
-    public static const HASH_ALGO = PASSWORD_BCRYPT;
+    public const HASH_ALGO = PASSWORD_BCRYPT;
 
     /**
      * Checks if a email address is in blacklist
