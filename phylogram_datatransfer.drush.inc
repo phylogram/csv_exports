@@ -29,7 +29,7 @@ function phylogram_datatransfer_drush_command() {
   ];
 
   $items['blacklist'] = [
-    'description' => ' Add/remove email-address to/from blacklist for export-csv',
+    'description' => ' Add/remove email-address to/from blacklist for export-csv. If add, will remove mail from data.',
     'options' => [
         'add' => 'email to add, separate lists with whitespace',
         'remove' => 'email to remove, separate lists with whitespace'
@@ -84,8 +84,8 @@ function drush_phylogram_datatransfer_export_csv() {
     $exclude = explode(' ', $exclude);
   }
   $phylogram_datatransfer_export_csv = new \Drupal\phylogram_datatransfer\ctrl\ExportCSV($start, $stop, $mode, $exclude);
-  $success = $phylogram_datatransfer_export_csv->execute();
-    // To Do: if success, store
+  $phylogram_datatransfer_export_csv->execute();
+
 }
 
 /**
@@ -95,15 +95,13 @@ function drush_phylogram_datatransfer_blacklist() {
     $add = drush_get_option('add');
     if ($add) {
         $addresses = explode(' ', $add);
-        foreach ($addresses as $address) {
-            Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::add($address);
-        }
+        \Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::addArray($addresses);
     }
     $remove = drush_get_option('remove');
     if ($remove) {
         $addresses = explode(' ', $add);
         foreach ($addresses as $address) {
-            Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::remove($address);
+            \Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::remove($address);
         }
     }
 
