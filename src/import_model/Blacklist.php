@@ -20,26 +20,33 @@ class Blacklist {
 
     const HASH_ALGO = PASSWORD_BCRYPT;
 
+    protected $emails = array();
+
+    public function _construct() {
+        $stm = <<<STM
+          SELECT phylogram_datatransfer_blacklist.email_address
+            FROM phylogram_datatransfer_blacklist
+STM;
+
+        $query  = db_query( $stm);
+        $this->emails = $query->fetchCol();
+    }
+
     /**
      * Checks if a email address is in blacklist
      *
 	 * @param string $email_address
 	 * @return  bool
 	 */
-	public static function contains( string $email_address ) {
+	public function contains( string $email_address ) {
 
-	    $email_address = password_hash($email_address, static::HASH_ALGO );
-		# if not in database return null and ask topic
-		$stm = <<<STM
-          SELECT phylogram_datatransfer_blacklist.email_address
-            FROM phylogram_datatransfer_blacklist
-           WHERE phylogram_datatransfer_blacklist.email_address = :email_address;
-STM;
-
-		$query  = db_query( $stm, [ ':email_address' => $email_address ] );
-		$result = $query->fetchField();
-
-		return $result == TRUE;
+		foreach ($this->emails as $hash) {
+		    $is_in = password_verify($email_address, $hash);
+		    if ($is_in) {
+		        return TRUE;
+            }
+        }
+		return FALSE;
 	}
 
     /**
@@ -59,15 +66,4 @@ STM;
 	    $insert->execute();
     }
 
-    /**
-     * Remove email address from black list.
-     *
-     * @param $email_address
-     */
-    public static function remove($email_address) {
-        $email_address = password_hash($email_address, static::HASH_ALGO);
-        $delete = db_delete('phylogram_datatransfer_blacklist');
-        $delete->condition('email_address', $email_address, '=');
-        $delete->execute();
-    }
 }
