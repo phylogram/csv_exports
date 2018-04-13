@@ -49,10 +49,12 @@ STM;
      */
 	public static function insert(array $email_addresses) {
 	    $insert = db_insert('phylogram_datatransfer_blacklist');
-        $insert->fields(['email_address']);
+        $insert->fields(['email_address', 'created']);
 	    foreach ($email_addresses as $email_address) {
+	        $now = new \DateObject();
+	        $now = $now->getTimestamp();
             $email_address = password_hash($email_address, static::HASH_ALGO);
-            $insert->values([$email_address]);
+            $insert->values([$email_address, $now]);
         }
 	    $insert->execute();
     }
