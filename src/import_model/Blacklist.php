@@ -65,7 +65,7 @@ STM;
      * @param $email_address
      */
     public static function remove($email_address) {
-        $email_address = password_hash($email_address);
+        $email_address = password_hash($email_address, static::HASH_ALGO);
         $delete = db_delete('phylogram_datatransfer_blacklist');
         $delete->condition('email_address', $email_address, '=');
         $delete->execute();
