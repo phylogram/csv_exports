@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/export_model/RemoveRows.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/design/debug.odt" afterPath="$PROJECT_DIR$/design/debug.odt" />
-      <change beforePath="$PROJECT_DIR$/phylogram_datatransfer.config" afterPath="$PROJECT_DIR$/phylogram_datatransfer.config" />
-      <change beforePath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" afterPath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" afterPath="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
       <change beforePath="$PROJECT_DIR$/src/import_model/Blacklist.php" afterPath="$PROJECT_DIR$/src/import_model/Blacklist.php" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/ImportInterface.php" afterPath="$PROJECT_DIR$/src/import_model/ImportInterface.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,10 +32,10 @@
       <file leaf-file-name="Blacklist.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="53" column="76" lean-forward="false" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
+            <state relative-caret-position="362">
+              <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
               <folding>
-                <marker date="1523605151751" expanded="true" signature="689:873" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
+                <marker date="1523606630258" expanded="true" signature="675:859" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
               </folding>
             </state>
           </provider>
@@ -382,12 +376,12 @@
       <workItem from="1523103705205" duration="34907000" />
       <workItem from="1523352301825" duration="23428000" />
       <workItem from="1523434507121" duration="20461000" />
-      <workItem from="1523534625413" duration="22438000" />
+      <workItem from="1523534625413" duration="23942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101234000" />
+    <option name="totallyTimeSpent" value="102738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="715" y="24" width="1303" height="780" extended-state="6" />
@@ -834,10 +828,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="53" column="76" lean-forward="false" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
+        <state relative-caret-position="362">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
           <folding>
-            <marker date="1523605151751" expanded="true" signature="689:873" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
+            <marker date="1523606630258" expanded="true" signature="675:859" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
           </folding>
         </state>
       </provider>
