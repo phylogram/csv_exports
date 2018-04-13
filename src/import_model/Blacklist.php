@@ -18,7 +18,9 @@ namespace Drupal\phylogram_datatransfer\import_model;
  */
 class Blacklist {
 
-	/**
+    public static const HASH_ALGO = PASSWORD_BCRYPT;
+
+    /**
      * Checks if a email address is in blacklist
      *
 	 * @param string $email_address
@@ -26,7 +28,7 @@ class Blacklist {
 	 */
 	public static function contains( string $email_address ) {
 
-	    $email_address = password_hash($email_address);
+	    $email_address = password_hash($email_address, static::HASH_ALGO );
 		# if not in database return null and ask topic
 		$stm = <<<STM
           SELECT phylogram_datatransfer_blacklist.email_address
@@ -43,14 +45,15 @@ STM;
     /**
      * Add new email address to blacklist.
      *
-     * @param $email_address
+     * @param array $email_addresses
      */
-	public static function insert($email_address) {
-        $email_address = password_hash($email_address);
+	public static function insert(array $email_addresses) {
 	    $insert = db_insert('phylogram_datatransfer_blacklist');
-	    $insert->fields([
-	        'email_address' => $email_address,
-        ]);
+        $insert->fields(['email_address']);
+	    foreach ($email_addresses as $email_address) {
+            $email_address = password_hash($email_address, static::HASH_ALGO);
+            $insert->values([$email_address]);
+        }
 	    $insert->execute();
     }
 
