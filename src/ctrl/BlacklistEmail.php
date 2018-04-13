@@ -32,12 +32,4 @@ class BlacklistEmail
         $removeRows->execute();
     }
 
-    /**
-     * Remove an email-address from the blacklist. This addresses will be exported. Old data will have to be exported
-     * again.
-     * @param string $email
-     */
-    static function remove(string $email) {
-        \Drupal\phylogram_datatransfer\import_model\Blacklist::remove($email);
-    }
 }

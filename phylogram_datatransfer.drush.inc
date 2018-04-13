@@ -32,7 +32,6 @@ function phylogram_datatransfer_drush_command() {
     'description' => ' Add/remove email-address to/from blacklist for export-csv. If add, will remove mail from data.',
     'options' => [
         'add' => 'email to add, separate lists with whitespace',
-        'remove' => 'email to remove, separate lists with whitespace'
     ],
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_DATABASE,
   ];
@@ -96,13 +95,8 @@ function drush_phylogram_datatransfer_blacklist() {
     if ($add) {
         $addresses = explode(' ', $add);
         \Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::addArray($addresses);
-    }
-    $remove = drush_get_option('remove');
-    if ($remove) {
-        $addresses = explode(' ', $add);
-        foreach ($addresses as $address) {
-            \Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::remove($address);
-        }
+    } else {
+        drush_set_error('Please provide on ore more email address separated with space')
     }
 
 }
