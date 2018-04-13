@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66adc278-fed8-4a3a-ade2-b24f0044d4d3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/import_model/Blacklist.php" afterPath="$PROJECT_DIR$/src/import_model/Blacklist.php" />
+      <change beforePath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" afterPath="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" afterPath="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,13 +30,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blacklist.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Blacklist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+            <state relative-caret-position="344">
+              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="36" />
               <folding>
-                <marker date="1523606630258" expanded="true" signature="675:859" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
+                <marker date="1523607642024" expanded="true" signature="447:550" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
               </folding>
             </state>
           </provider>
@@ -77,17 +78,17 @@
         <entry file="file://$PROJECT_DIR$/src/export_model/RemoveRows.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phylogram_datatransfer.drush.inc" pinned="false" current-in-tab="false">
+      <file leaf-file-name="phylogram_datatransfer.drush.inc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-862">
-              <caret line="31" column="117" lean-forward="false" selection-start-line="31" selection-start-column="117" selection-end-line="31" selection-end-column="117" />
+            <state relative-caret-position="276">
+              <caret line="33" column="64" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -96,8 +97,8 @@
       <file leaf-file-name="BlacklistEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ctrl/BlacklistEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="488">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#6#139#0#PHP" expanded="true" />
               </folding>
@@ -109,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-574">
-              <caret line="20" column="113" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="113" />
+              <caret line="20" column="113" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -203,9 +204,9 @@
         <option value="$PROJECT_DIR$/src/import_model/ImportInterface.php" />
         <option value="$PROJECT_DIR$/src/export_model/RemoveEmail.php" />
         <option value="$PROJECT_DIR$/src/export_model/RemoveRows.php" />
+        <option value="$PROJECT_DIR$/src/import_model/Blacklist.php" />
         <option value="$PROJECT_DIR$/src/ctrl/BlacklistEmail.php" />
         <option value="$PROJECT_DIR$/phylogram_datatransfer.drush.inc" />
-        <option value="$PROJECT_DIR$/src/import_model/Blacklist.php" />
       </list>
     </option>
   </component>
@@ -225,10 +226,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="715" />
-    <option name="y" value="24" />
-    <option name="width" value="651" />
-    <option name="height" value="744" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -376,18 +377,18 @@
       <workItem from="1523103705205" duration="34907000" />
       <workItem from="1523352301825" duration="23428000" />
       <workItem from="1523434507121" duration="20461000" />
-      <workItem from="1523534625413" duration="23942000" />
+      <workItem from="1523534625413" duration="25242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102738000" />
+    <option name="totallyTimeSpent" value="104038000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="715" y="24" width="1303" height="780" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -445,7 +446,7 @@
         <state relative-caret-position="1674">
           <caret line="172" column="24" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="84" />
           <folding>
-            <element signature="e#6#105#0#PHP" expanded="true" />
+            <element signature="e#6#105#0#PHP" expanded="false" />
             <element signature="e#3238#6143#1#PHP" expanded="false" />
             <element signature="e#6322#7855#1#PHP" expanded="false" />
           </folding>
@@ -677,7 +678,7 @@
         <state relative-caret-position="-12">
           <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
           <folding>
-            <element signature="e#7#90#0#PHP" expanded="true" />
+            <element signature="e#7#90#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,7 +688,7 @@
         <state relative-caret-position="2034">
           <caret line="187" column="23" lean-forward="true" selection-start-line="187" selection-start-column="23" selection-end-line="187" selection-end-column="23" />
           <folding>
-            <element signature="e#6#105#0#PHP" expanded="true" />
+            <element signature="e#6#105#0#PHP" expanded="false" />
             <element signature="e#3238#6143#1#PHP" expanded="false" />
             <element signature="e#6322#7855#1#PHP" expanded="false" />
           </folding>
@@ -699,7 +700,7 @@
         <state relative-caret-position="46">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#7#106#0#PHP" expanded="true" />
+            <element signature="e#7#106#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -787,7 +788,7 @@
     <entry file="file://$PROJECT_DIR$/src/export_model/RemoveRows.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -800,39 +801,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
+    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-862">
-          <caret line="31" column="117" lean-forward="false" selection-start-line="31" selection-start-column="117" selection-end-line="31" selection-end-column="117" />
+        <state relative-caret-position="-574">
+          <caret line="20" column="113" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="113" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/AbstractImportPDO.php">
+    <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-574">
-          <caret line="20" column="113" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="113" />
-          <folding />
+        <state relative-caret-position="344">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <marker date="1523607642024" expanded="true" signature="447:550" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ctrl/BlacklistEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        <state relative-caret-position="488">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#6#139#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/import_model/Blacklist.php">
+    <entry file="file://$PROJECT_DIR$/phylogram_datatransfer.drush.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-          <folding>
-            <marker date="1523606630258" expanded="true" signature="675:859" ph="SELECT phylo... phylogram_datatransfer_blacklist" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="33" column="64" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
