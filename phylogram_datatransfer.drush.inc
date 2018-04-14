@@ -96,7 +96,7 @@ function drush_phylogram_datatransfer_blacklist() {
         $addresses = explode(' ', $add);
         \Drupal\phylogram_datatransfer\ctrl\BlacklistEmail::addArray($addresses);
     } else {
-        drush_set_error('Please provide on ore more email address separated with space')
+        drush_set_error('Please provide on ore more email address separated with space');
     }
 
 }
