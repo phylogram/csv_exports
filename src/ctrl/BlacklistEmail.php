@@ -10,26 +10,28 @@
 
 namespace Drupal\phylogram_datatransfer\ctrl;
 
-module_load_include( 'config', 'phylogram_datatransfer', 'phylogram_datatransfer' );
+module_load_include('config', 'phylogram_datatransfer', 'phylogram_datatransfer');
 
-class BlacklistEmail
-{
-    /**
-     * Add an email-address to the blacklist. These Email-adresses will not be exported.
-     * @param array $emails
-     */
-    static function addArray(array $emails) {
-        \Drupal\phylogram_datatransfer\import_model\Blacklist::insert($emails);
+class BlacklistEmail {
 
-        $removeRows = new \Drupal\phylogram_datatransfer\export_model\RemoveRows(
-            PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER,
-            $emails,
-            PHYLOGRAM_DATATRANSFER_CSV_DELIMITER,
-            PHYLOGRAM_DATATRANSFER_CSV_ENCLOSURE,
-            PHYLOGRAM_DATATRANSFER_CSV_ESCAPE_CHAR,
-            PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION
-        );
-        $removeRows->execute();
-    }
+  /**
+   * Add an email-address to the blacklist. These Email-adresses will not be
+   * exported.
+   *
+   * @param array $emails
+   */
+  static function addArray(array $emails) {
+    \Drupal\phylogram_datatransfer\import_model\Blacklist::insert($emails);
+
+    $removeRows = new \Drupal\phylogram_datatransfer\export_model\RemoveRows(
+      PHYLOGRAM_DATATRANSFER_EXPORT_DATA_FOLDER,
+      $emails,
+      PHYLOGRAM_DATATRANSFER_CSV_DELIMITER,
+      PHYLOGRAM_DATATRANSFER_CSV_ENCLOSURE,
+      PHYLOGRAM_DATATRANSFER_CSV_ESCAPE_CHAR,
+      PHYLOGRAM_DATATRANSFER__DEFAULT_EXPORT_FILE_EXTENSION
+    );
+    $removeRows->execute();
+  }
 
 }

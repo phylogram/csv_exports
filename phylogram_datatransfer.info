@@ -6,7 +6,7 @@ files[] = phylogram_datatransfer.config
 
 files[] = src/ctrl/*.php
 files[] = src/export_model/*.php
-files[]= src/import_model/*.php
+files[] = src/import_model/*.php
 files[] = src/imoprt_model/imports/*.php
 
 dependencies[] = xautoload (>= 7.x-5.0)

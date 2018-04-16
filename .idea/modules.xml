@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../../../.idea/campaignion.iml" filepath="$PROJECT_DIR$/../../../../.idea/campaignion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../.idea/campaignion_starterkit.iml" filepath="$PROJECT_DIR$/../../../../.idea/campaignion_starterkit.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/phylogram_datatransfer.iml" filepath="$PROJECT_DIR$/.idea/phylogram_datatransfer.iml" />
     </modules>
   </component>

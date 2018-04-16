@@ -3,12 +3,22 @@
 drush_print("HELLO\n\n");
 
 
-var_dump(date_default_timezone_object());
-$date = new \DateObject();
-$now = $date->getTimestamp();
-echo "now: $now\n";
-$date->modify('First day of next month');
-$later = $date->getTimestamp();
-echo "later: $later\n";
-$time_passed = $later - $now;
-echo "$$time_passed: $time_passed";
+//$query = new \EntityQuery();
+//$query->entityCondition( 'entity_type', 'redhen_contact' );
+//$result = $query->execute();
+$result = entity_get_info('redhen_contact');
+$fh = fopen('/home/phylogram/redhen_contact.json', 'w');
+fwrite($fh, json_encode($result));
+fclose($fh);
+/**
+$loaded = array();
+
+foreach (array_keys($result['redhen_contact']) as $id) {
+$loaded[$id] = entity_load('redhen_contact', $id);
+}
+
+
+$fh = fopen('/home/phylogram/redhen_contact_loaded.json', 'w');
+fwrite($fh, json_encode($loaded));
+fclose($fh);
+*/

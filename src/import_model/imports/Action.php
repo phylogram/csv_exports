@@ -10,20 +10,20 @@ namespace Drupal\phylogram_datatransfer\import_model\imports;
 
 class Action extends \Drupal\phylogram_datatransfer\import_model\AbstractImportPDO {
 
-	public static $oldest_entry_stm = <<<STM2
+  public static $oldest_entry_stm = <<<STM2
   SELECT submitted 
     FROM webform_submissions
 ORDER BY submitted ASC
    LIMIT 1;
 STM2;
 
-	/**
-	 * Prepares the main statement
-	 *
-	 */
-	protected function _create_stm_0( string $fields ) {
+  /**
+   * Prepares the main statement
+   *
+   */
+  protected function _create_stm_0(string $fields) {
 
-		$this->stm_0 = <<<MAIN_STM
+    $this->stm_0 = <<<MAIN_STM
 SELECT $fields
   FROM webform_submissions
   JOIN (webform_tracking)
@@ -41,6 +41,6 @@ SELECT $fields
 		       OR node.type = 'petition'
 		       );
 MAIN_STM;
-	}
+  }
 
 }
